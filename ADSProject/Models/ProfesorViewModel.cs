@@ -18,7 +18,7 @@ namespace ADSProject.Models
         public string nombreProfesor { get; set; }
 
         [Required(ErrorMessage = Constants.REQUIRED_FIELD)]
-        [StringLength(50, MinimumLength = 3, ErrorMessage = "La longitud del campo no debe ser mayor a 50 caracteres ni menor de 3 caracteres.")]
+        [StringLength(50, MinimumLength = 5, ErrorMessage = "La longitud del campo no debe ser mayor a 50 caracteres ni menor de 5 caracteres.")]
         [Display(Name = "Apellido")]
         public string apellidoProfesor { get; set; }
 
