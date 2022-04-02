@@ -12,33 +12,91 @@ namespace ADSProject.Repository
 
         public CarreraRepository()
         {
-
+            lstCarreras = new List<CarreraViewModel>
+            {
+                new CarreraViewModel {idCarrera = 1, CodigoCarrera= "ADS001", NombreCarrera = "Análisis de sistemas"}
+            };
         }
 
         public int agregarCarrera(CarreraViewModel carreraViewModel)
         {
-            throw new NotImplementedException();
+            try
+            {
+                if(lstCarreras.Count > 0)
+                {
+                    carreraViewModel.idCarrera = lstCarreras.Last().idCarrera + 1;
+                }
+                else
+                {
+                    carreraViewModel.idCarrera = 1;
+                }
+                lstCarreras.Add(carreraViewModel);
+                return carreraViewModel.idCarrera;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public int actualizarCarrera(int idCarrera, CarreraViewModel carreraViewModel)
         {
-            throw new NotImplementedException();
+            try
+            {
+                lstCarreras[lstCarreras.FindIndex(x => x.idCarrera == idCarrera)] = carreraViewModel;
+                return carreraViewModel.idCarrera;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
         }
 
 
-        public bool eliminarEstudiante(int idCarrera)
+        public bool eliminarCarrera(int idCarrera)
         {
-            throw new NotImplementedException();
+            try
+            {
+                lstCarreras.RemoveAt(lstCarreras.FindIndex(x => x.idCarrera == idCarrera));
+                return true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
         }
 
         public CarreraViewModel obtenerCarreraPorID(int idCarrera)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var item = lstCarreras.Find(x => x.idCarrera == idCarrera);
+                return item;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
         }
 
         public List<CarreraViewModel> obtenerCarrera()
         {
-            throw new NotImplementedException();
+            try
+            {
+                return lstCarreras;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
     }

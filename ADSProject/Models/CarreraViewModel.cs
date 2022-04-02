@@ -13,7 +13,7 @@ namespace ADSProject.Models
         public int idCarrera { get; set; }
 
         [Required(ErrorMessage = Constants.REQUIRED_FIELD)]
-        [StringLength(50, MinimumLength = 12, ErrorMessage = "La longitud del campo debe ser de 12 caracteres.")]
+        [StringLength(50, MinimumLength = 5, ErrorMessage = "La longitud máxima del campo debe ser de 50 caracteres.")]
         [Display(Name = "Codigo")]
         public string CodigoCarrera { get; set; }
 

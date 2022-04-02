@@ -14,7 +14,7 @@ namespace ADSProject.Repository
 
         int actualizarCarrera(int idCarrera, CarreraViewModel carreraViewModel);
 
-        bool eliminarEstudiante(int idCarrera);
+        bool eliminarCarrera(int idCarrera);
 
         CarreraViewModel obtenerCarreraPorID(int idCarrera);
     }
