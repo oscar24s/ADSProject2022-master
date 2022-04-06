@@ -15,7 +15,7 @@ namespace ADSProject.Repository
             lstEstudiantes = new List<EstudianteViewModel>
             {
                 new EstudianteViewModel{ idEstudiante = 1, nombresEstudiante = "Juan", apellidosEstudiante = "Perez",
-                    codigoEstudiante = "PG16I04002", correoEstudiante = "Juan@usonsonate.edu.sv"}
+                    codigoEstudiante = "PG16I0400221", correoEstudiante = "Juan@usonsonate.edu.sv"}
             };
         }
 

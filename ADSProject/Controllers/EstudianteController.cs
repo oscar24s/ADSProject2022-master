@@ -81,7 +81,7 @@ namespace ADSProject.Controllers
             }
         }
 
-        [HttpGet]
+        [HttpPost] // se cambió a Post para eliminar el registro
         public IActionResult Delete(int idEstudiante)
         {
             try
