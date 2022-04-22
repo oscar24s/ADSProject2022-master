@@ -49,17 +49,18 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 
-<script>$(document).ready(function () {
+<script>
+    $(document).ready(function () {
         // Cuando la operacion sobre el formulario es de lectura.
         if ($("#operacion").val() == "leer") {
             $("form").find("input,select").attr("disabled", true);
         }
-});
-
+     });
         // agregando ajax
         $("form").addClass("form-ajax");
         // activando ajax
-        initAjaxForm();
+    initAjaxForm();
+
 </script>
 
 }
