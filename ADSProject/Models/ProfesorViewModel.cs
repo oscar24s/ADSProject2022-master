@@ -9,6 +9,7 @@ namespace ADSProject.Models
 {
     public class ProfesorViewModel
     {
+        [Key]
         [Display(Name = "ID")]
         public int idProfesor { get; set; }
 
@@ -26,5 +27,7 @@ namespace ADSProject.Models
         [StringLength(70, MinimumLength = 3, ErrorMessage = "La longitud del campo no debe ser mayor a 70 caracteres ni menor de 3 caracteres.")]
         [Display(Name = "Correo")]
         public string correoEstudiante { get; set; }
+
+        public bool estado { get; set; }
     }
 }

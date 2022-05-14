@@ -8,6 +8,7 @@ namespace ADSProject.Models
 {
     public class GrupoViewModel
     {
+        [Key]
         [Display(Name = "ID Grupo")]
         public int idGrupo { get; set; }
 
@@ -26,5 +27,6 @@ namespace ADSProject.Models
         [Display(Name = "Anio")]
         public int anio { get; set; }
 
+        public bool estado { get; set; }
     }
 }

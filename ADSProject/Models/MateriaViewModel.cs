@@ -5,6 +5,7 @@ namespace ADSProject.Models
 {
     public class MateriaViewModel
     {
+        [Key]
         [Display(Name = "ID")]
         public int idMateria { get; set; }
 
@@ -12,5 +13,7 @@ namespace ADSProject.Models
         [StringLength(50, MinimumLength = 3, ErrorMessage = "La longitud del campo no debe ser mayor a 50 caracteres ni menor de 3 caracteres.")]
         [Display(Name = "Nombre Materia")]
         public string nombreMateria { get; set; }
+
+        public bool estado { get; set; }
     }
 }
