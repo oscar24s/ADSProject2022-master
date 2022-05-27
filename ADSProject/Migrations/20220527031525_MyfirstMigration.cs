@@ -2,7 +2,7 @@
 
 namespace ADSProject.Migrations
 {
-    public partial class MyFirstMigration : Migration
+    public partial class MyfirstMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -19,23 +19,6 @@ namespace ADSProject.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Carreras", x => x.idCarrera);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Estudiantes",
-                columns: table => new
-                {
-                    idEstudiante = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    nombresEstudiante = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    apellidosEstudiante = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    codigoEstudiante = table.Column<string>(type: "nvarchar(12)", maxLength: 12, nullable: false),
-                    correoEstudiante = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    estado = table.Column<bool>(type: "bit", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Estudiantes", x => x.idEstudiante);
                 });
 
             migrationBuilder.CreateTable(
@@ -85,13 +68,39 @@ namespace ADSProject.Migrations
                 {
                     table.PrimaryKey("PK_Profesores", x => x.idProfesor);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "Estudiantes",
+                columns: table => new
+                {
+                    idEstudiante = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    nombresEstudiante = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    apellidosEstudiante = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    codigoEstudiante = table.Column<string>(type: "nvarchar(12)", maxLength: 12, nullable: false),
+                    correoEstudiante = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    estado = table.Column<bool>(type: "bit", nullable: false),
+                    idCarrera = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Estudiantes", x => x.idEstudiante);
+                    table.ForeignKey(
+                        name: "FK_Estudiantes_Carreras_idCarrera",
+                        column: x => x.idCarrera,
+                        principalTable: "Carreras",
+                        principalColumn: "idCarrera",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Estudiantes_idCarrera",
+                table: "Estudiantes",
+                column: "idCarrera");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "Carreras");
-
             migrationBuilder.DropTable(
                 name: "Estudiantes");
 
@@ -103,6 +112,9 @@ namespace ADSProject.Migrations
 
             migrationBuilder.DropTable(
                 name: "Profesores");
+
+            migrationBuilder.DropTable(
+                name: "Carreras");
         }
     }
 }

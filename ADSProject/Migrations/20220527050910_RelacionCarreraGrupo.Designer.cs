@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ADSProject.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220521032509_RelacionCarreraEstudiante")]
-    partial class RelacionCarreraEstudiante
+    [Migration("20220527050910_RelacionCarreraGrupo")]
+    partial class RelacionCarreraGrupo
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -112,6 +112,8 @@ namespace ADSProject.Migrations
 
                     b.HasKey("idGrupo");
 
+                    b.HasIndex("idCarrera");
+
                     b.ToTable("Grupos");
                 });
 
@@ -125,12 +127,17 @@ namespace ADSProject.Migrations
                     b.Property<bool>("estado")
                         .HasColumnType("bit");
 
+                    b.Property<int>("idCarrera")
+                        .HasColumnType("int");
+
                     b.Property<string>("nombreMateria")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
                     b.HasKey("idMateria");
+
+                    b.HasIndex("idCarrera");
 
                     b.ToTable("Materias");
                 });
@@ -166,6 +173,28 @@ namespace ADSProject.Migrations
                 });
 
             modelBuilder.Entity("ADSProject.Models.EstudianteViewModel", b =>
+                {
+                    b.HasOne("ADSProject.Models.CarreraViewModel", "Carreras")
+                        .WithMany()
+                        .HasForeignKey("idCarrera")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Carreras");
+                });
+
+            modelBuilder.Entity("ADSProject.Models.GrupoViewModel", b =>
+                {
+                    b.HasOne("ADSProject.Models.CarreraViewModel", "Carreras")
+                        .WithMany()
+                        .HasForeignKey("idCarrera")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Carreras");
+                });
+
+            modelBuilder.Entity("ADSProject.Models.MateriaViewModel", b =>
                 {
                     b.HasOne("ADSProject.Models.CarreraViewModel", "Carreras")
                         .WithMany()

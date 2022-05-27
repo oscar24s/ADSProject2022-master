@@ -10,6 +10,8 @@ namespace ADSProject.Repository
     {
         List<GrupoViewModel> obtenerGrupos();
 
+        List<GrupoViewModel> obtenerGrupos(String[] includes);
+
         int agregarGrupo(GrupoViewModel grupoViewModel);
 
         int actualizarGrupo(int idGrupo, GrupoViewModel grupoViewModel);

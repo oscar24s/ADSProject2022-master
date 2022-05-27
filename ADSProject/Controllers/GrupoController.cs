@@ -12,10 +12,12 @@ namespace ADSProject.Controllers
     public class GrupoController : Controller
     {
         private readonly IGrupoRepository grupoRepository;
+        private readonly ICarreraRepository carreraRepository;
 
-        public GrupoController(IGrupoRepository grupoRepository)
+        public GrupoController(IGrupoRepository grupoRepository, ICarreraRepository carreraRepository)
         {
             this.grupoRepository = grupoRepository;
+            this.carreraRepository = carreraRepository;
         }
 
         [HttpGet]
@@ -23,7 +25,7 @@ namespace ADSProject.Controllers
         {
             try
             {
-                var item = grupoRepository.obtenerGrupos();
+                var item = grupoRepository.obtenerGrupos(new String[] { "Carreras" });
                 return View(item);
             }
             catch (Exception)
@@ -46,6 +48,9 @@ namespace ADSProject.Controllers
                 }
                 // Indica el tipo de operacion que es esta realizando
                 ViewData["Operaciones"] = operaciones;
+
+                // obteniendo todas las carreras disponibles
+                ViewBag.Carreras = carreraRepository.obtenerCarrera();
                 return View(grupo);
 
             }
