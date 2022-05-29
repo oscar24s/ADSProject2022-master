@@ -17,7 +17,7 @@ namespace ADSProject.Migrations
                 column: "idCarrera",
                 principalTable: "Carreras",
                 principalColumn: "idCarrera",
-                onDelete: ReferentialAction.Cascade);
+                onDelete: ReferentialAction.NoAction);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

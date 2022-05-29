@@ -38,6 +38,7 @@ namespace ADSProject.Repository
                 lstGrupos.Add(grupoViewModel);*/
                 applicationDbContext.Grupos.Add(grupoViewModel);
                 applicationDbContext.SaveChanges();
+
                 return grupoViewModel.idGrupo;
             }
             catch (Exception)

@@ -13,20 +13,28 @@ namespace ADSProject.Controllers
     {
         private readonly IGrupoRepository grupoRepository;
         private readonly ICarreraRepository carreraRepository;
+        private readonly IMateriaRepository materiaRepository;
+        private readonly IProfesorRepository profesorRepository;
 
-        public GrupoController(IGrupoRepository grupoRepository, ICarreraRepository carreraRepository)
+        public GrupoController(IGrupoRepository grupoRepository, ICarreraRepository carreraRepository,IMateriaRepository materiaRepository ,IProfesorRepository profesorRepository)
         {
             this.grupoRepository = grupoRepository;
             this.carreraRepository = carreraRepository;
+            this.materiaRepository = materiaRepository;
+            this.profesorRepository = profesorRepository;
         }
+
+      
 
         [HttpGet]
         public IActionResult Index()
         {
             try
             {
-                var item = grupoRepository.obtenerGrupos(new String[] { "Carreras" });
+                var item = grupoRepository.obtenerGrupos(new String[] { "Carreras" , "Materias", "Profesores" });
                 return View(item);
+
+                
             }
             catch (Exception)
             {
@@ -34,6 +42,8 @@ namespace ADSProject.Controllers
                 throw;
             }
         }
+
+
 
         [HttpGet]
         public IActionResult Form(int? idGrupo, Operaciones operaciones)
@@ -51,6 +61,8 @@ namespace ADSProject.Controllers
 
                 // obteniendo todas las carreras disponibles
                 ViewBag.Carreras = carreraRepository.obtenerCarrera();
+                ViewBag.Materias = materiaRepository.obtenerMateria();
+                ViewBag.Profesor = profesorRepository.obtenerProfesor();
                 return View(grupo);
 
             }
