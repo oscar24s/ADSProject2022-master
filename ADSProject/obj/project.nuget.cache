@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "mG0UiQzFq2RdCN8ZStE0Rd2aviuH/TAqztgeHCNJcwUje95NAFK2qg5LQXRXM5+3nAkEV25FB4BhLUXW3YNaTA==",
+  "dgSpecHash": "MqNTamTfflEGV3zcu+evz0r9/Ki9s6rhbheDSG57Wt2H1xG638vVQqxDLdv95XWSfPfXkn57zlaXLYKob1ntsg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Sony\\Desktop\\CICLO1_2022\\LAB_ADS\\ADSProject2022-master\\ADSProject\\ADSProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sony\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Sony\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Sony\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.1.0\\microsoft.aspnetcore.http.abstractions.2.1.0.nupkg.sha512",
+    "C:\\Users\\Sony\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.1.0\\microsoft.aspnetcore.http.features.2.1.0.nupkg.sha512",
     "C:\\Users\\Sony\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\5.0.13\\microsoft.aspnetcore.mvc.razor.extensions.5.0.13.nupkg.sha512",
     "C:\\Users\\Sony\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\5.0.13\\microsoft.aspnetcore.mvc.razor.runtimecompilation.5.0.13.nupkg.sha512",
     "C:\\Users\\Sony\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

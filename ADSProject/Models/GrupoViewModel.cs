@@ -44,6 +44,6 @@ namespace ADSProject.Models
         [ForeignKey("idProfesor")]
         public ProfesorViewModel Profesores { get; set; }
 
-        public ICollection<AsignacionGrupoViewModel> AsignacionGrupo { get; set; }
+        public ICollection<AsignacionGrupoViewModel> AsignacionGrupos { get; set; }
     }
 }

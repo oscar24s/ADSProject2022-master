@@ -41,6 +41,6 @@ namespace ADSProject.Models
         [ForeignKey("idCarrera")]
         public CarreraViewModel Carreras { get; set; }
 
-        public ICollection<AsignacionGrupoViewModel> AsignacionGrupo { get; set; }
+        public ICollection<AsignacionGrupoViewModel> AsignacionGrupos { get; set; }
     }
 }

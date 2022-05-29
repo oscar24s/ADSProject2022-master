@@ -69,7 +69,7 @@
                             </td>
                             <td>
                                 <a class="btn btn-primary"
-                                   asp-route-iGrupo="@item.idGrupo"
+                                   asp-route-idGrupo="@item.idGrupo"
                                    asp-action="Form"
                                    asp-route-operaciones="@Operaciones.modificar">Modificar</a>
                                 <a class="btn btn-warning"
@@ -79,6 +79,10 @@
                                 <a class="btn btn-danger eliminar"
                                    asp-route-idGrupo="@item.idGrupo"
                                    asp-action="Delete">Eliminar</a>
+                                <a class="btn btn-secondary"
+                                   asp-route-idGrupo="@item.idGrupo"
+                                   asp-action="Form"
+                                   asp-controller="AsignacionGrupo">Asignar Grupo</a>
                             </td>
                         </tr>
                     }

@@ -24,6 +24,6 @@ namespace ADSProject.Data
 
         public DbSet<GrupoViewModel> Grupos { get; set; }
 
-        public DbSet<AsignacionGrupoViewModel> AsignacionGrupo {get; set;}
+        public DbSet<AsignacionGrupoViewModel> AsignacionGrupos {get; set;}
     }
 }
