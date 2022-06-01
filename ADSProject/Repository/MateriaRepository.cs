@@ -105,7 +105,7 @@ namespace ADSProject.Repository
                 throw;
             }
         }
-        public List<MateriaViewModel> obtenerMateria()
+        public List<MateriaViewModel> obtenerMaterias()
         {
             try
             {
@@ -119,7 +119,7 @@ namespace ADSProject.Repository
             }
         }
 
-        public List<MateriaViewModel> obtenerMateria(String[] includes)
+        public List<MateriaViewModel> obtenerMaterias(String[] includes)
         {
             try
             {

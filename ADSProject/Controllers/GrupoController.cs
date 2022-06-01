@@ -6,6 +6,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
 
 namespace ADSProject.Controllers
 {
@@ -15,13 +17,17 @@ namespace ADSProject.Controllers
         private readonly ICarreraRepository carreraRepository;
         private readonly IMateriaRepository materiaRepository;
         private readonly IProfesorRepository profesorRepository;
+        private readonly ILogger<EstudianteController> logger;
 
-        public GrupoController(IGrupoRepository grupoRepository, ICarreraRepository carreraRepository,IMateriaRepository materiaRepository ,IProfesorRepository profesorRepository)
+        public GrupoController(IGrupoRepository grupoRepository, ICarreraRepository carreraRepository,
+                                IMateriaRepository materiaRepository ,IProfesorRepository profesorRepository,
+                                ILogger<EstudianteController> logger)
         {
             this.grupoRepository = grupoRepository;
             this.carreraRepository = carreraRepository;
             this.materiaRepository = materiaRepository;
             this.profesorRepository = profesorRepository;
+            this.logger = logger;
         }
 
       
@@ -61,7 +67,7 @@ namespace ADSProject.Controllers
 
                 // obteniendo todas las carreras disponibles
                 ViewBag.Carreras = carreraRepository.obtenerCarrera();
-                ViewBag.Materias = materiaRepository.obtenerMateria();
+                ViewBag.Materias = materiaRepository.obtenerMaterias();
                 ViewBag.Profesor = profesorRepository.obtenerProfesor();
                 return View(grupo);
 
@@ -78,16 +84,34 @@ namespace ADSProject.Controllers
         {
             try
             {
-                if (grupoViewModel.idGrupo == 0) // En caso de insertar
+                if (ModelState.IsValid)
                 {
-                    grupoRepository.agregarGrupo(grupoViewModel);
-                }
-                else // En caso de actualizar
-                {
-                    grupoRepository.actualizarGrupo(grupoViewModel.idGrupo, grupoViewModel);
 
+
+                    int id = 0;
+                    if (grupoViewModel.idGrupo == 0) // En caso de insertar
+                    {
+                        id = grupoRepository.agregarGrupo(grupoViewModel);
+                    }
+                    else // En caso de actualizar
+                    {
+                        id = grupoRepository.actualizarGrupo(grupoViewModel.idGrupo, grupoViewModel);
+
+                    }
+                    if (id > 0)
+                    {
+                        return StatusCode(StatusCodes.Status200OK);
+                    }
+                    else
+                    {
+                        return StatusCode(StatusCodes.Status202Accepted);
+                    }
                 }
-                return RedirectToAction("Index");
+                else
+                {
+                    return StatusCode(StatusCodes.Status400BadRequest);
+                }
+                //return RedirectToAction("Index");
             }
             catch (Exception)
             {
@@ -111,5 +135,16 @@ namespace ADSProject.Controllers
 
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public IActionResult cargarMaterias(int? idCarrera)
+        {
+            var listadoCarreras = idCarrera == null ? new List<MateriaViewModel>() :
+
+            materiaRepository.obtenerMaterias().Where(x => x.idCarrera == idCarrera);
+
+            return StatusCode(StatusCodes.Status200OK, listadoCarreras);
+        }
+
     }
 }

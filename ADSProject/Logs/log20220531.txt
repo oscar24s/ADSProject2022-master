@@ -1,0 +1,1224 @@
+2022-05-31 09:55:24.753 -06:00 [INF] User profile is available. Using 'C:\Users\Sony\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-05-31 09:55:29.896 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-31 09:55:29.897 -06:00 [INF] Hosting environment: Development
+2022-05-31 09:55:29.897 -06:00 [INF] Content root path: C:\Users\Sony\Desktop\CICLO1_2022\LAB_ADS\ADSProject2022-master\ADSProject
+2022-05-31 09:55:30.231 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/ - -
+2022-05-31 09:55:30.424 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 09:55:31.831 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.HomeController (ADSProject).
+2022-05-31 09:55:32.698 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 09:55:33.603 -06:00 [INF] Executed ViewResult - view Index executed in 1142.2085ms.
+2022-05-31 09:55:33.609 -06:00 [INF] Executed action ADSProject.Controllers.HomeController.Index (ADSProject) in 1776.578ms
+2022-05-31 09:55:33.611 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 09:55:33.706 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/ - - - 200 - text/html;+charset=utf-8 3478.4161ms
+2022-05-31 09:55:33.962 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/js/site.js?v=BxFAw9RUJ1E4NycpKEjCNDeoSvr4RPHixdBq5wDnkeY - -
+2022-05-31 09:55:33.972 -06:00 [INF] The file /js/site.js was not modified
+2022-05-31 09:55:33.976 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/js/site.js?v=BxFAw9RUJ1E4NycpKEjCNDeoSvr4RPHixdBq5wDnkeY - - - 304 - application/javascript 13.3704ms
+2022-05-31 09:55:33.993 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/lib/jquery/dist/jquery.min.js - -
+2022-05-31 09:55:33.993 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/css/site.css - -
+2022-05-31 09:55:33.994 -06:00 [INF] The file /lib/jquery/dist/jquery.min.js was not modified
+2022-05-31 09:55:33.994 -06:00 [INF] The file /css/site.css was not modified
+2022-05-31 09:55:33.995 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/css/site.css - - - 304 - text/css 1.7810ms
+2022-05-31 09:55:33.996 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/lib/jquery/dist/jquery.min.js - - - 304 - application/javascript 2.4351ms
+2022-05-31 09:55:34.088 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2022-05-31 09:55:34.088 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/lib/bootstrap/dist/css/bootstrap.min.css - -
+2022-05-31 09:55:34.089 -06:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.min.css was not modified
+2022-05-31 09:55:34.089 -06:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.bundle.min.js was not modified
+2022-05-31 09:55:34.090 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/lib/bootstrap/dist/css/bootstrap.min.css - - - 304 - text/css 1.6456ms
+2022-05-31 09:55:34.090 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 304 - application/javascript 1.9758ms
+2022-05-31 09:55:38.622 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Grupo - -
+2022-05-31 09:55:38.626 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 09:55:38.630 -06:00 [INF] Route matched with {action = "Index", controller = "Grupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.GrupoController (ADSProject).
+2022-05-31 09:55:42.253 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 09:55:45.629 -06:00 [INF] Executed DbCommand (308ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado], [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria], [p].[idProfesor], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado], [p].[nombreProfesor]
+FROM [Grupos] AS [g]
+INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+WHERE [g].[estado] = CAST(1 AS bit)
+2022-05-31 09:55:45.919 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 09:55:46.010 -06:00 [INF] Executed ViewResult - view Index executed in 96.4172ms.
+2022-05-31 09:55:46.010 -06:00 [INF] Executed action ADSProject.Controllers.GrupoController.Index (ADSProject) in 7379.2464ms
+2022-05-31 09:55:46.010 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 09:55:46.124 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Grupo - - - 200 - text/html;+charset=utf-8 7502.5508ms
+2022-05-31 09:56:27.496 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/ - -
+2022-05-31 09:56:27.497 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 09:56:27.501 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.HomeController (ADSProject).
+2022-05-31 09:56:27.517 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 09:56:27.555 -06:00 [INF] Executed ViewResult - view Index executed in 41.6059ms.
+2022-05-31 09:56:27.555 -06:00 [INF] Executed action ADSProject.Controllers.HomeController.Index (ADSProject) in 54.5959ms
+2022-05-31 09:56:27.555 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 09:56:27.557 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/ - - - 200 - text/html;+charset=utf-8 60.5664ms
+2022-05-31 09:56:28.718 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Estudiante - -
+2022-05-31 09:56:28.722 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.EstudianteController.Index (ADSProject)'
+2022-05-31 09:56:28.726 -06:00 [INF] Route matched with {action = "Index", controller = "Estudiante"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.EstudianteController (ADSProject).
+2022-05-31 09:56:28.793 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 09:56:28.834 -06:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[idEstudiante], [e].[apellidosEstudiante], [e].[codigoEstudiante], [e].[correoEstudiante], [e].[estado], [e].[idCarrera], [e].[nombresEstudiante], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado]
+FROM [Estudiantes] AS [e]
+INNER JOIN [Carreras] AS [c] ON [e].[idCarrera] = [c].[idCarrera]
+WHERE [e].[estado] = CAST(1 AS bit)
+2022-05-31 09:56:28.886 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 09:56:28.919 -06:00 [INF] Executed ViewResult - view Index executed in 58.8277ms.
+2022-05-31 09:56:28.919 -06:00 [INF] Executed action ADSProject.Controllers.EstudianteController.Index (ADSProject) in 193.124ms
+2022-05-31 09:56:28.919 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.EstudianteController.Index (ADSProject)'
+2022-05-31 09:56:28.921 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Estudiante - - - 200 - text/html;+charset=utf-8 202.8872ms
+2022-05-31 09:56:55.569 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2022-05-31 09:56:56.273 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/lib/bootstrap/dist/css/bootstrap.min.css.map - -
+2022-05-31 09:56:57.208 -06:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\Sony\Desktop\CICLO1_2022\LAB_ADS\ADSProject2022-master\ADSProject\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2022-05-31 09:56:57.465 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 311949 text/plain 1896.2665ms
+2022-05-31 09:56:59.518 -06:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css.map'. Physical path: 'C:\Users\Sony\Desktop\CICLO1_2022\LAB_ADS\ADSProject2022-master\ADSProject\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map'
+2022-05-31 09:56:59.540 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/lib/bootstrap/dist/css/bootstrap.min.css.map - - - 200 625953 text/plain 3266.2478ms
+2022-05-31 10:02:26.395 -06:00 [INF] User profile is available. Using 'C:\Users\Sony\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-05-31 10:02:27.640 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-31 10:02:27.641 -06:00 [INF] Hosting environment: Development
+2022-05-31 10:02:27.641 -06:00 [INF] Content root path: C:\Users\Sony\Desktop\CICLO1_2022\LAB_ADS\ADSProject2022-master\ADSProject
+2022-05-31 10:02:27.769 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/ - -
+2022-05-31 10:02:27.871 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 10:02:28.017 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.HomeController (ADSProject).
+2022-05-31 10:02:28.155 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 10:02:28.576 -06:00 [INF] Executed ViewResult - view Index executed in 521.2441ms.
+2022-05-31 10:02:28.584 -06:00 [INF] Executed action ADSProject.Controllers.HomeController.Index (ADSProject) in 565.4821ms
+2022-05-31 10:02:28.585 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 10:02:28.628 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/ - - - 200 - text/html;+charset=utf-8 867.1627ms
+2022-05-31 10:02:31.981 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Estudiante - -
+2022-05-31 10:02:31.987 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.EstudianteController.Index (ADSProject)'
+2022-05-31 10:02:31.996 -06:00 [INF] Route matched with {action = "Index", controller = "Estudiante"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.EstudianteController (ADSProject).
+2022-05-31 10:02:33.740 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 10:02:35.203 -06:00 [INF] Executed DbCommand (94ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[idEstudiante], [e].[apellidosEstudiante], [e].[codigoEstudiante], [e].[correoEstudiante], [e].[estado], [e].[idCarrera], [e].[nombresEstudiante], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado]
+FROM [Estudiantes] AS [e]
+INNER JOIN [Carreras] AS [c] ON [e].[idCarrera] = [c].[idCarrera]
+WHERE [e].[estado] = CAST(1 AS bit)
+2022-05-31 10:02:35.403 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 10:02:35.455 -06:00 [INF] Executed ViewResult - view Index executed in 57.9449ms.
+2022-05-31 10:02:35.456 -06:00 [INF] Executed action ADSProject.Controllers.EstudianteController.Index (ADSProject) in 3459.2102ms
+2022-05-31 10:02:35.456 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.EstudianteController.Index (ADSProject)'
+2022-05-31 10:02:35.468 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Estudiante - - - 200 - text/html;+charset=utf-8 3486.1182ms
+2022-05-31 10:06:56.763 -06:00 [INF] User profile is available. Using 'C:\Users\Sony\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-05-31 10:06:57.931 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-31 10:06:57.932 -06:00 [INF] Hosting environment: Development
+2022-05-31 10:06:57.932 -06:00 [INF] Content root path: C:\Users\Sony\Desktop\CICLO1_2022\LAB_ADS\ADSProject2022-master\ADSProject
+2022-05-31 10:06:58.019 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/ - -
+2022-05-31 10:06:58.132 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 10:06:58.258 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.HomeController (ADSProject).
+2022-05-31 10:06:58.420 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 10:06:58.787 -06:00 [INF] Executed ViewResult - view Index executed in 482.1399ms.
+2022-05-31 10:06:58.793 -06:00 [INF] Executed action ADSProject.Controllers.HomeController.Index (ADSProject) in 532.4008ms
+2022-05-31 10:06:58.795 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 10:06:58.869 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/ - - - 200 - text/html;+charset=utf-8 855.7228ms
+2022-05-31 10:07:02.360 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Estudiante - -
+2022-05-31 10:07:02.367 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.EstudianteController.Index (ADSProject)'
+2022-05-31 10:07:02.377 -06:00 [INF] Route matched with {action = "Index", controller = "Estudiante"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.EstudianteController (ADSProject).
+2022-05-31 10:07:04.425 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 10:07:05.904 -06:00 [INF] Executed DbCommand (106ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[idEstudiante], [e].[apellidosEstudiante], [e].[codigoEstudiante], [e].[correoEstudiante], [e].[estado], [e].[idCarrera], [e].[nombresEstudiante], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado]
+FROM [Estudiantes] AS [e]
+INNER JOIN [Carreras] AS [c] ON [e].[idCarrera] = [c].[idCarrera]
+WHERE [e].[estado] = CAST(1 AS bit)
+2022-05-31 10:07:06.119 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 10:07:06.207 -06:00 [INF] Executed ViewResult - view Index executed in 95.4023ms.
+2022-05-31 10:07:06.208 -06:00 [INF] Executed action ADSProject.Controllers.EstudianteController.Index (ADSProject) in 3829.6806ms
+2022-05-31 10:07:06.208 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.EstudianteController.Index (ADSProject)'
+2022-05-31 10:07:06.219 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Estudiante - - - 200 - text/html;+charset=utf-8 3859.4010ms
+2022-05-31 10:08:07.499 -06:00 [INF] User profile is available. Using 'C:\Users\Sony\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-05-31 10:08:08.728 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-31 10:08:08.728 -06:00 [INF] Hosting environment: Development
+2022-05-31 10:08:08.728 -06:00 [INF] Content root path: C:\Users\Sony\Desktop\CICLO1_2022\LAB_ADS\ADSProject2022-master\ADSProject
+2022-05-31 10:08:08.942 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/ - -
+2022-05-31 10:08:09.031 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 10:08:09.126 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.HomeController (ADSProject).
+2022-05-31 10:08:09.287 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 10:08:09.643 -06:00 [INF] Executed ViewResult - view Index executed in 479.2312ms.
+2022-05-31 10:08:09.648 -06:00 [INF] Executed action ADSProject.Controllers.HomeController.Index (ADSProject) in 521.3905ms
+2022-05-31 10:08:09.649 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 10:08:09.667 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/ - - - 200 - text/html;+charset=utf-8 732.8972ms
+2022-05-31 10:08:12.009 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Carrera - -
+2022-05-31 10:08:12.014 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.CarreraController.Index (ADSProject)'
+2022-05-31 10:08:12.018 -06:00 [INF] Route matched with {action = "Index", controller = "Carrera"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.CarreraController (ADSProject).
+2022-05-31 10:08:13.909 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 10:08:15.288 -06:00 [INF] Executed DbCommand (87ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado]
+FROM [Carreras] AS [c]
+WHERE [c].[estado] = CAST(1 AS bit)
+2022-05-31 10:08:15.461 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 10:08:15.510 -06:00 [INF] Executed ViewResult - view Index executed in 53.7382ms.
+2022-05-31 10:08:15.510 -06:00 [INF] Executed action ADSProject.Controllers.CarreraController.Index (ADSProject) in 3492.3216ms
+2022-05-31 10:08:15.510 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.CarreraController.Index (ADSProject)'
+2022-05-31 10:08:15.527 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Carrera - - - 200 - text/html;+charset=utf-8 3517.2938ms
+2022-05-31 10:08:18.302 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/ - -
+2022-05-31 10:08:18.302 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 10:08:18.303 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.HomeController (ADSProject).
+2022-05-31 10:08:18.303 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 10:08:18.308 -06:00 [INF] Executed ViewResult - view Index executed in 4.6299ms.
+2022-05-31 10:08:18.308 -06:00 [INF] Executed action ADSProject.Controllers.HomeController.Index (ADSProject) in 5.3329ms
+2022-05-31 10:08:18.308 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 10:08:18.312 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/ - - - 200 - text/html;+charset=utf-8 10.2082ms
+2022-05-31 10:08:22.037 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Estudiante - -
+2022-05-31 10:08:22.051 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.EstudianteController.Index (ADSProject)'
+2022-05-31 10:08:22.055 -06:00 [INF] Route matched with {action = "Index", controller = "Estudiante"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.EstudianteController (ADSProject).
+2022-05-31 10:08:22.127 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 10:08:22.264 -06:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[idEstudiante], [e].[apellidosEstudiante], [e].[codigoEstudiante], [e].[correoEstudiante], [e].[estado], [e].[idCarrera], [e].[nombresEstudiante], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado]
+FROM [Estudiantes] AS [e]
+INNER JOIN [Carreras] AS [c] ON [e].[idCarrera] = [c].[idCarrera]
+WHERE [e].[estado] = CAST(1 AS bit)
+2022-05-31 10:08:22.333 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 10:08:22.368 -06:00 [INF] Executed ViewResult - view Index executed in 40.482ms.
+2022-05-31 10:08:22.368 -06:00 [INF] Executed action ADSProject.Controllers.EstudianteController.Index (ADSProject) in 312.9184ms
+2022-05-31 10:08:22.368 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.EstudianteController.Index (ADSProject)'
+2022-05-31 10:08:22.370 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Estudiante - - - 200 - text/html;+charset=utf-8 332.8143ms
+2022-05-31 10:08:24.701 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/ - -
+2022-05-31 10:08:24.702 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 10:08:24.703 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.HomeController (ADSProject).
+2022-05-31 10:08:24.703 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 10:08:24.708 -06:00 [INF] Executed ViewResult - view Index executed in 4.4938ms.
+2022-05-31 10:08:24.708 -06:00 [INF] Executed action ADSProject.Controllers.HomeController.Index (ADSProject) in 4.9278ms
+2022-05-31 10:08:24.708 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 10:08:24.710 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/ - - - 200 - text/html;+charset=utf-8 9.3045ms
+2022-05-31 10:08:26.048 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Materia - -
+2022-05-31 10:08:26.048 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.MateriaController.Index (ADSProject)'
+2022-05-31 10:08:26.050 -06:00 [INF] Route matched with {action = "Index", controller = "Materia"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.MateriaController (ADSProject).
+2022-05-31 10:08:26.069 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 10:08:26.114 -06:00 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado]
+FROM [Materias] AS [m]
+INNER JOIN [Carreras] AS [c] ON [m].[idCarrera] = [c].[idCarrera]
+WHERE [m].[estado] = CAST(1 AS bit)
+2022-05-31 10:08:26.150 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 10:08:26.176 -06:00 [INF] Executed ViewResult - view Index executed in 36.5764ms.
+2022-05-31 10:08:26.177 -06:00 [INF] Executed action ADSProject.Controllers.MateriaController.Index (ADSProject) in 126.0899ms
+2022-05-31 10:08:26.177 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.MateriaController.Index (ADSProject)'
+2022-05-31 10:08:26.179 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Materia - - - 200 - text/html;+charset=utf-8 131.0565ms
+2022-05-31 10:08:27.891 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/ - -
+2022-05-31 10:08:27.892 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 10:08:27.892 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.HomeController (ADSProject).
+2022-05-31 10:08:27.894 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 10:08:27.896 -06:00 [INF] Executed ViewResult - view Index executed in 2.7044ms.
+2022-05-31 10:08:27.896 -06:00 [INF] Executed action ADSProject.Controllers.HomeController.Index (ADSProject) in 3.3879ms
+2022-05-31 10:08:27.897 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 10:08:27.898 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/ - - - 200 - text/html;+charset=utf-8 6.7769ms
+2022-05-31 10:08:29.026 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Profesor - -
+2022-05-31 10:08:29.026 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.ProfesorController.Index (ADSProject)'
+2022-05-31 10:08:29.028 -06:00 [INF] Route matched with {action = "Index", controller = "Profesor"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.ProfesorController (ADSProject).
+2022-05-31 10:08:29.030 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 10:08:29.071 -06:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[idProfesor], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado], [p].[nombreProfesor]
+FROM [Profesores] AS [p]
+WHERE [p].[estado] = CAST(1 AS bit)
+2022-05-31 10:08:29.096 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 10:08:29.124 -06:00 [INF] Executed ViewResult - view Index executed in 32.4504ms.
+2022-05-31 10:08:29.125 -06:00 [INF] Executed action ADSProject.Controllers.ProfesorController.Index (ADSProject) in 96.4379ms
+2022-05-31 10:08:29.125 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.ProfesorController.Index (ADSProject)'
+2022-05-31 10:08:29.127 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Profesor - - - 200 - text/html;+charset=utf-8 101.0983ms
+2022-05-31 10:08:30.587 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/ - -
+2022-05-31 10:08:30.588 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 10:08:30.588 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.HomeController (ADSProject).
+2022-05-31 10:08:30.595 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 10:08:30.599 -06:00 [INF] Executed ViewResult - view Index executed in 4.1575ms.
+2022-05-31 10:08:30.599 -06:00 [INF] Executed action ADSProject.Controllers.HomeController.Index (ADSProject) in 4.5839ms
+2022-05-31 10:08:30.599 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 10:08:30.604 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/ - - - 200 - text/html;+charset=utf-8 16.4813ms
+2022-05-31 10:08:31.794 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Grupo - -
+2022-05-31 10:08:31.794 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 10:08:31.797 -06:00 [INF] Route matched with {action = "Index", controller = "Grupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.GrupoController (ADSProject).
+2022-05-31 10:08:31.805 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 10:08:31.894 -06:00 [INF] Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado], [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria], [p].[idProfesor], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado], [p].[nombreProfesor]
+FROM [Grupos] AS [g]
+INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+WHERE [g].[estado] = CAST(1 AS bit)
+2022-05-31 10:08:31.950 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 10:08:31.986 -06:00 [INF] Executed ViewResult - view Index executed in 42.087ms.
+2022-05-31 10:08:31.986 -06:00 [INF] Executed action ADSProject.Controllers.GrupoController.Index (ADSProject) in 188.8383ms
+2022-05-31 10:08:31.986 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 10:08:31.988 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Grupo - - - 200 - text/html;+charset=utf-8 194.2740ms
+2022-05-31 10:11:47.617 -06:00 [INF] User profile is available. Using 'C:\Users\Sony\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-05-31 10:11:48.726 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-31 10:11:48.726 -06:00 [INF] Hosting environment: Development
+2022-05-31 10:11:48.726 -06:00 [INF] Content root path: C:\Users\Sony\Desktop\CICLO1_2022\LAB_ADS\ADSProject2022-master\ADSProject
+2022-05-31 10:11:48.814 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/ - -
+2022-05-31 10:11:48.880 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 10:11:49.011 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.HomeController (ADSProject).
+2022-05-31 10:11:49.117 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 10:11:49.455 -06:00 [INF] Executed ViewResult - view Index executed in 413.2105ms.
+2022-05-31 10:11:49.460 -06:00 [INF] Executed action ADSProject.Controllers.HomeController.Index (ADSProject) in 447.1701ms
+2022-05-31 10:11:49.461 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 10:11:49.482 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/ - - - 200 - text/html;+charset=utf-8 672.7992ms
+2022-05-31 10:11:51.711 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Grupo - -
+2022-05-31 10:11:51.717 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 10:11:51.726 -06:00 [INF] Route matched with {action = "Index", controller = "Grupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.GrupoController (ADSProject).
+2022-05-31 10:11:53.467 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 10:11:54.892 -06:00 [INF] Executed DbCommand (90ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado], [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria], [p].[idProfesor], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado], [p].[nombreProfesor]
+FROM [Grupos] AS [g]
+INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+WHERE [g].[estado] = CAST(1 AS bit)
+2022-05-31 10:11:55.161 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 10:11:55.213 -06:00 [INF] Executed ViewResult - view Index executed in 57.9825ms.
+2022-05-31 10:11:55.214 -06:00 [INF] Executed action ADSProject.Controllers.GrupoController.Index (ADSProject) in 3488.0798ms
+2022-05-31 10:11:55.214 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 10:11:55.226 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Grupo - - - 200 - text/html;+charset=utf-8 3515.1369ms
+2022-05-31 10:13:39.736 -06:00 [INF] User profile is available. Using 'C:\Users\Sony\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-05-31 10:13:40.791 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-31 10:13:40.791 -06:00 [INF] Hosting environment: Development
+2022-05-31 10:13:40.791 -06:00 [INF] Content root path: C:\Users\Sony\Desktop\CICLO1_2022\LAB_ADS\ADSProject2022-master\ADSProject
+2022-05-31 10:13:40.907 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/ - -
+2022-05-31 10:13:40.980 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 10:13:41.100 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.HomeController (ADSProject).
+2022-05-31 10:13:41.199 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 10:13:41.522 -06:00 [INF] Executed ViewResult - view Index executed in 387.2167ms.
+2022-05-31 10:13:41.531 -06:00 [INF] Executed action ADSProject.Controllers.HomeController.Index (ADSProject) in 429.6604ms
+2022-05-31 10:13:41.533 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 10:13:41.575 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/ - - - 200 - text/html;+charset=utf-8 660.8035ms
+2022-05-31 10:13:43.489 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Grupo - -
+2022-05-31 10:13:43.500 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 10:13:43.505 -06:00 [INF] Route matched with {action = "Index", controller = "Grupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.GrupoController (ADSProject).
+2022-05-31 10:13:45.273 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 10:13:46.676 -06:00 [INF] Executed DbCommand (62ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado], [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria], [p].[idProfesor], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado], [p].[nombreProfesor]
+FROM [Grupos] AS [g]
+INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+WHERE [g].[estado] = CAST(1 AS bit)
+2022-05-31 10:13:46.937 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 10:13:46.992 -06:00 [INF] Executed ViewResult - view Index executed in 61.5108ms.
+2022-05-31 10:13:46.992 -06:00 [INF] Executed action ADSProject.Controllers.GrupoController.Index (ADSProject) in 3487.4735ms
+2022-05-31 10:13:46.993 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 10:13:47.003 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Grupo - - - 200 - text/html;+charset=utf-8 3514.0205ms
+2022-05-31 10:15:13.839 -06:00 [INF] User profile is available. Using 'C:\Users\Sony\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-05-31 10:15:14.931 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-31 10:15:14.932 -06:00 [INF] Hosting environment: Development
+2022-05-31 10:15:14.932 -06:00 [INF] Content root path: C:\Users\Sony\Desktop\CICLO1_2022\LAB_ADS\ADSProject2022-master\ADSProject
+2022-05-31 10:15:15.035 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/ - -
+2022-05-31 10:15:15.110 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 10:15:15.249 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.HomeController (ADSProject).
+2022-05-31 10:15:15.364 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 10:15:15.712 -06:00 [INF] Executed ViewResult - view Index executed in 429.2234ms.
+2022-05-31 10:15:15.716 -06:00 [INF] Executed action ADSProject.Controllers.HomeController.Index (ADSProject) in 466.0278ms
+2022-05-31 10:15:15.718 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 10:15:15.743 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/ - - - 200 - text/html;+charset=utf-8 712.6331ms
+2022-05-31 10:15:17.808 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Grupo - -
+2022-05-31 10:15:17.822 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 10:15:17.829 -06:00 [INF] Route matched with {action = "Index", controller = "Grupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.GrupoController (ADSProject).
+2022-05-31 10:15:19.709 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 10:15:21.460 -06:00 [INF] Executed DbCommand (61ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado], [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria], [p].[idProfesor], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado], [p].[nombreProfesor]
+FROM [Grupos] AS [g]
+INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+WHERE [g].[estado] = CAST(1 AS bit)
+2022-05-31 10:15:21.749 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 10:15:21.830 -06:00 [INF] Executed ViewResult - view Index executed in 87.2979ms.
+2022-05-31 10:15:21.830 -06:00 [INF] Executed action ADSProject.Controllers.GrupoController.Index (ADSProject) in 4000.6228ms
+2022-05-31 10:15:21.831 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 10:15:21.846 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Grupo - - - 200 - text/html;+charset=utf-8 4037.6855ms
+2022-05-31 10:16:33.271 -06:00 [INF] User profile is available. Using 'C:\Users\Sony\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-05-31 10:16:34.353 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-31 10:16:34.354 -06:00 [INF] Hosting environment: Development
+2022-05-31 10:16:34.354 -06:00 [INF] Content root path: C:\Users\Sony\Desktop\CICLO1_2022\LAB_ADS\ADSProject2022-master\ADSProject
+2022-05-31 10:16:34.476 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/ - -
+2022-05-31 10:16:34.562 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 10:16:34.668 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.HomeController (ADSProject).
+2022-05-31 10:16:34.783 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 10:16:35.105 -06:00 [INF] Executed ViewResult - view Index executed in 409.8308ms.
+2022-05-31 10:16:35.113 -06:00 [INF] Executed action ADSProject.Controllers.HomeController.Index (ADSProject) in 443.7513ms
+2022-05-31 10:16:35.114 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 10:16:35.140 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/ - - - 200 - text/html;+charset=utf-8 668.7711ms
+2022-05-31 10:16:37.125 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Grupo - -
+2022-05-31 10:16:37.131 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 10:16:37.145 -06:00 [INF] Route matched with {action = "Index", controller = "Grupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.GrupoController (ADSProject).
+2022-05-31 10:16:39.078 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 10:16:40.615 -06:00 [INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado], [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria], [p].[idProfesor], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado], [p].[nombreProfesor]
+FROM [Grupos] AS [g]
+INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+WHERE [g].[estado] = CAST(1 AS bit)
+2022-05-31 10:16:40.869 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 10:16:40.930 -06:00 [INF] Executed ViewResult - view Index executed in 66.6934ms.
+2022-05-31 10:16:40.930 -06:00 [INF] Executed action ADSProject.Controllers.GrupoController.Index (ADSProject) in 3784.7378ms
+2022-05-31 10:16:40.930 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 10:16:40.942 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Grupo - - - 200 - text/html;+charset=utf-8 3817.4598ms
+2022-05-31 20:19:03.112 -06:00 [INF] User profile is available. Using 'C:\Users\Sony\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-05-31 20:19:07.439 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-31 20:19:07.440 -06:00 [INF] Hosting environment: Development
+2022-05-31 20:19:07.440 -06:00 [INF] Content root path: C:\Users\Sony\Desktop\CICLO1_2022\LAB_ADS\ADSProject2022-master\ADSProject
+2022-05-31 20:19:07.799 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/ - -
+2022-05-31 20:19:08.015 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 20:19:08.394 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.HomeController (ADSProject).
+2022-05-31 20:19:08.650 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 20:19:09.385 -06:00 [INF] Executed ViewResult - view Index executed in 893.0538ms.
+2022-05-31 20:19:09.399 -06:00 [INF] Executed action ADSProject.Controllers.HomeController.Index (ADSProject) in 1003.9471ms
+2022-05-31 20:19:09.400 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 20:19:09.497 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/ - - - 200 - text/html;+charset=utf-8 1726.4011ms
+2022-05-31 20:20:34.915 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Grupo - -
+2022-05-31 20:20:34.931 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 20:20:34.935 -06:00 [INF] Route matched with {action = "Index", controller = "Grupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.GrupoController (ADSProject).
+2022-05-31 20:20:37.542 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 20:20:41.316 -06:00 [INF] Executed DbCommand (832ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado], [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria], [p].[idProfesor], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado], [p].[nombreProfesor]
+FROM [Grupos] AS [g]
+INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+WHERE [g].[estado] = CAST(1 AS bit)
+2022-05-31 20:20:41.709 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 20:20:41.852 -06:00 [INF] Executed ViewResult - view Index executed in 186.3251ms.
+2022-05-31 20:20:41.853 -06:00 [INF] Executed action ADSProject.Controllers.GrupoController.Index (ADSProject) in 6917.5001ms
+2022-05-31 20:20:41.853 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 20:20:41.880 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Grupo - - - 200 - text/html;+charset=utf-8 6977.3080ms
+2022-05-31 20:21:04.181 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/AsignacionGrupo/Form?idGrupo=6 - -
+2022-05-31 20:21:04.204 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject)'
+2022-05-31 20:21:04.335 -06:00 [INF] Route matched with {action = "Form", controller = "AsignacionGrupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Form(Int32) on controller ADSProject.Controllers.AsignacionGrupoController (ADSProject).
+2022-05-31 20:21:04.532 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 20:21:04.613 -06:00 [INF] Executed DbCommand (71ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[idEstudiante], [e].[apellidosEstudiante], [e].[codigoEstudiante], [e].[correoEstudiante], [e].[estado], [e].[idCarrera], [e].[nombresEstudiante]
+FROM [Estudiantes] AS [e]
+WHERE [e].[estado] = CAST(1 AS bit)
+2022-05-31 20:21:05.386 -06:00 [INF] Executed DbCommand (267ms) [Parameters=[@__idGrupo_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[idGrupo], [t].[anio], [t].[ciclo], [t].[estado], [t].[idCarrera], [t].[idMateria], [t].[idProfesor], [t].[idCarrera0], [t].[CodigoCarrera], [t].[NombreCarrera], [t].[estado0], [t].[idProfesor0], [t].[apellidoProfesor], [t].[correoEstudiante], [t].[estado1], [t].[nombreProfesor], [t].[idMateria0], [t].[estado2], [t].[idCarrera1], [t].[nombreMateria], [t0].[id], [t0].[idEstudiante], [t0].[idGrupo], [t0].[idEstudiante0], [t0].[apellidosEstudiante], [t0].[codigoEstudiante], [t0].[correoEstudiante], [t0].[estado], [t0].[idCarrera], [t0].[nombresEstudiante]
+FROM (
+    SELECT TOP(2) [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera] AS [idCarrera0], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado] AS [estado0], [p].[idProfesor] AS [idProfesor0], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado] AS [estado1], [p].[nombreProfesor], [m].[idMateria] AS [idMateria0], [m].[estado] AS [estado2], [m].[idCarrera] AS [idCarrera1], [m].[nombreMateria]
+    FROM [Grupos] AS [g]
+    INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+    INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+    INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+    WHERE ([g].[estado] = CAST(1 AS bit)) AND ([g].[idGrupo] = @__idGrupo_0)
+) AS [t]
+LEFT JOIN (
+    SELECT [a].[id], [a].[idEstudiante], [a].[idGrupo], [e].[idEstudiante] AS [idEstudiante0], [e].[apellidosEstudiante], [e].[codigoEstudiante], [e].[correoEstudiante], [e].[estado], [e].[idCarrera], [e].[nombresEstudiante]
+    FROM [AsignacionGrupos] AS [a]
+    INNER JOIN [Estudiantes] AS [e] ON [a].[idEstudiante] = [e].[idEstudiante]
+) AS [t0] ON [t].[idGrupo] = [t0].[idGrupo]
+ORDER BY [t].[idGrupo], [t].[idCarrera0], [t].[idProfesor0], [t].[idMateria0], [t0].[id], [t0].[idEstudiante0]
+2022-05-31 20:21:05.453 -06:00 [INF] Executing ViewResult, running view Form.
+2022-05-31 20:21:05.698 -06:00 [INF] Executed ViewResult - view Form executed in 260.8411ms.
+2022-05-31 20:21:05.698 -06:00 [INF] Executed action ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject) in 1363.2165ms
+2022-05-31 20:21:05.698 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject)'
+2022-05-31 20:21:05.728 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/AsignacionGrupo/Form?idGrupo=6 - - - 200 - text/html;+charset=utf-8 1547.4262ms
+2022-05-31 20:21:14.613 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:45719/AsignacionGrupo/Form multipart/form-data;+boundary=----WebKitFormBoundaryjv6Nh3hqJ0R8wwZH 637
+2022-05-31 20:21:14.614 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject)'
+2022-05-31 20:21:14.660 -06:00 [INF] Route matched with {action = "Form", controller = "AsignacionGrupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Form(ADSProject.Models.GrupoViewModel) on controller ADSProject.Controllers.AsignacionGrupoController (ADSProject).
+2022-05-31 20:21:14.948 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 20:21:15.405 -06:00 [INF] Executed DbCommand (179ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AsignacionGrupos] ([idEstudiante], [idGrupo])
+VALUES (@p0, @p1);
+SELECT [id]
+FROM [AsignacionGrupos]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity();
+2022-05-31 20:21:15.490 -06:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2022-05-31 20:21:15.490 -06:00 [INF] Executed action ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject) in 830.3588ms
+2022-05-31 20:21:15.491 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject)'
+2022-05-31 20:21:15.494 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:45719/AsignacionGrupo/Form multipart/form-data;+boundary=----WebKitFormBoundaryjv6Nh3hqJ0R8wwZH 637 - 200 - - 880.7814ms
+2022-05-31 20:21:16.638 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Grupo - -
+2022-05-31 20:21:16.639 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 20:21:16.642 -06:00 [INF] Route matched with {action = "Index", controller = "Grupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.GrupoController (ADSProject).
+2022-05-31 20:21:16.646 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 20:21:16.663 -06:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado], [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria], [p].[idProfesor], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado], [p].[nombreProfesor]
+FROM [Grupos] AS [g]
+INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+WHERE [g].[estado] = CAST(1 AS bit)
+2022-05-31 20:21:16.664 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 20:21:16.693 -06:00 [INF] Executed ViewResult - view Index executed in 28.8208ms.
+2022-05-31 20:21:16.693 -06:00 [INF] Executed action ADSProject.Controllers.GrupoController.Index (ADSProject) in 51.2524ms
+2022-05-31 20:21:16.694 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 20:21:16.695 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Grupo - - - 200 - text/html;+charset=utf-8 57.1638ms
+2022-05-31 20:21:19.749 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/AsignacionGrupo/Form?idGrupo=6 - -
+2022-05-31 20:21:19.749 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject)'
+2022-05-31 20:21:19.750 -06:00 [INF] Route matched with {action = "Form", controller = "AsignacionGrupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Form(Int32) on controller ADSProject.Controllers.AsignacionGrupoController (ADSProject).
+2022-05-31 20:21:19.756 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 20:21:19.758 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[idEstudiante], [e].[apellidosEstudiante], [e].[codigoEstudiante], [e].[correoEstudiante], [e].[estado], [e].[idCarrera], [e].[nombresEstudiante]
+FROM [Estudiantes] AS [e]
+WHERE [e].[estado] = CAST(1 AS bit)
+2022-05-31 20:21:19.780 -06:00 [INF] Executed DbCommand (20ms) [Parameters=[@__idGrupo_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[idGrupo], [t].[anio], [t].[ciclo], [t].[estado], [t].[idCarrera], [t].[idMateria], [t].[idProfesor], [t].[idCarrera0], [t].[CodigoCarrera], [t].[NombreCarrera], [t].[estado0], [t].[idProfesor0], [t].[apellidoProfesor], [t].[correoEstudiante], [t].[estado1], [t].[nombreProfesor], [t].[idMateria0], [t].[estado2], [t].[idCarrera1], [t].[nombreMateria], [t0].[id], [t0].[idEstudiante], [t0].[idGrupo], [t0].[idEstudiante0], [t0].[apellidosEstudiante], [t0].[codigoEstudiante], [t0].[correoEstudiante], [t0].[estado], [t0].[idCarrera], [t0].[nombresEstudiante]
+FROM (
+    SELECT TOP(2) [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera] AS [idCarrera0], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado] AS [estado0], [p].[idProfesor] AS [idProfesor0], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado] AS [estado1], [p].[nombreProfesor], [m].[idMateria] AS [idMateria0], [m].[estado] AS [estado2], [m].[idCarrera] AS [idCarrera1], [m].[nombreMateria]
+    FROM [Grupos] AS [g]
+    INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+    INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+    INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+    WHERE ([g].[estado] = CAST(1 AS bit)) AND ([g].[idGrupo] = @__idGrupo_0)
+) AS [t]
+LEFT JOIN (
+    SELECT [a].[id], [a].[idEstudiante], [a].[idGrupo], [e].[idEstudiante] AS [idEstudiante0], [e].[apellidosEstudiante], [e].[codigoEstudiante], [e].[correoEstudiante], [e].[estado], [e].[idCarrera], [e].[nombresEstudiante]
+    FROM [AsignacionGrupos] AS [a]
+    INNER JOIN [Estudiantes] AS [e] ON [a].[idEstudiante] = [e].[idEstudiante]
+) AS [t0] ON [t].[idGrupo] = [t0].[idGrupo]
+ORDER BY [t].[idGrupo], [t].[idCarrera0], [t].[idProfesor0], [t].[idMateria0], [t0].[id], [t0].[idEstudiante0]
+2022-05-31 20:21:19.783 -06:00 [INF] Executing ViewResult, running view Form.
+2022-05-31 20:21:19.790 -06:00 [INF] Executed ViewResult - view Form executed in 7.2381ms.
+2022-05-31 20:21:19.791 -06:00 [INF] Executed action ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject) in 40.1952ms
+2022-05-31 20:21:19.791 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject)'
+2022-05-31 20:21:19.794 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/AsignacionGrupo/Form?idGrupo=6 - - - 200 - text/html;+charset=utf-8 44.5460ms
+2022-05-31 20:21:35.470 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:45719/AsignacionGrupo/Form multipart/form-data;+boundary=----WebKitFormBoundaryDWB1kcjPvfpcQu6J 402
+2022-05-31 20:21:35.470 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject)'
+2022-05-31 20:21:35.471 -06:00 [INF] Route matched with {action = "Form", controller = "AsignacionGrupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Form(ADSProject.Models.GrupoViewModel) on controller ADSProject.Controllers.AsignacionGrupoController (ADSProject).
+2022-05-31 20:21:35.473 -06:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2022-05-31 20:21:35.473 -06:00 [INF] Executed action ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject) in 2.5205ms
+2022-05-31 20:21:35.473 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject)'
+2022-05-31 20:21:35.476 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:45719/AsignacionGrupo/Form multipart/form-data;+boundary=----WebKitFormBoundaryDWB1kcjPvfpcQu6J 402 - 200 - - 5.5899ms
+2022-05-31 20:21:37.174 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Grupo - -
+2022-05-31 20:21:37.174 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 20:21:37.174 -06:00 [INF] Route matched with {action = "Index", controller = "Grupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.GrupoController (ADSProject).
+2022-05-31 20:21:37.178 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 20:21:37.183 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado], [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria], [p].[idProfesor], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado], [p].[nombreProfesor]
+FROM [Grupos] AS [g]
+INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+WHERE [g].[estado] = CAST(1 AS bit)
+2022-05-31 20:21:37.184 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 20:21:37.192 -06:00 [INF] Executed ViewResult - view Index executed in 8.1359ms.
+2022-05-31 20:21:37.193 -06:00 [INF] Executed action ADSProject.Controllers.GrupoController.Index (ADSProject) in 18.2869ms
+2022-05-31 20:21:37.193 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 20:21:37.194 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Grupo - - - 200 - text/html;+charset=utf-8 20.1536ms
+2022-05-31 20:21:38.494 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/AsignacionGrupo/Form?idGrupo=6 - -
+2022-05-31 20:21:38.494 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject)'
+2022-05-31 20:21:38.494 -06:00 [INF] Route matched with {action = "Form", controller = "AsignacionGrupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Form(Int32) on controller ADSProject.Controllers.AsignacionGrupoController (ADSProject).
+2022-05-31 20:21:38.498 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 20:21:38.500 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[idEstudiante], [e].[apellidosEstudiante], [e].[codigoEstudiante], [e].[correoEstudiante], [e].[estado], [e].[idCarrera], [e].[nombresEstudiante]
+FROM [Estudiantes] AS [e]
+WHERE [e].[estado] = CAST(1 AS bit)
+2022-05-31 20:21:38.503 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__idGrupo_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[idGrupo], [t].[anio], [t].[ciclo], [t].[estado], [t].[idCarrera], [t].[idMateria], [t].[idProfesor], [t].[idCarrera0], [t].[CodigoCarrera], [t].[NombreCarrera], [t].[estado0], [t].[idProfesor0], [t].[apellidoProfesor], [t].[correoEstudiante], [t].[estado1], [t].[nombreProfesor], [t].[idMateria0], [t].[estado2], [t].[idCarrera1], [t].[nombreMateria], [t0].[id], [t0].[idEstudiante], [t0].[idGrupo], [t0].[idEstudiante0], [t0].[apellidosEstudiante], [t0].[codigoEstudiante], [t0].[correoEstudiante], [t0].[estado], [t0].[idCarrera], [t0].[nombresEstudiante]
+FROM (
+    SELECT TOP(2) [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera] AS [idCarrera0], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado] AS [estado0], [p].[idProfesor] AS [idProfesor0], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado] AS [estado1], [p].[nombreProfesor], [m].[idMateria] AS [idMateria0], [m].[estado] AS [estado2], [m].[idCarrera] AS [idCarrera1], [m].[nombreMateria]
+    FROM [Grupos] AS [g]
+    INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+    INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+    INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+    WHERE ([g].[estado] = CAST(1 AS bit)) AND ([g].[idGrupo] = @__idGrupo_0)
+) AS [t]
+LEFT JOIN (
+    SELECT [a].[id], [a].[idEstudiante], [a].[idGrupo], [e].[idEstudiante] AS [idEstudiante0], [e].[apellidosEstudiante], [e].[codigoEstudiante], [e].[correoEstudiante], [e].[estado], [e].[idCarrera], [e].[nombresEstudiante]
+    FROM [AsignacionGrupos] AS [a]
+    INNER JOIN [Estudiantes] AS [e] ON [a].[idEstudiante] = [e].[idEstudiante]
+) AS [t0] ON [t].[idGrupo] = [t0].[idGrupo]
+ORDER BY [t].[idGrupo], [t].[idCarrera0], [t].[idProfesor0], [t].[idMateria0], [t0].[id], [t0].[idEstudiante0]
+2022-05-31 20:21:38.506 -06:00 [INF] Executing ViewResult, running view Form.
+2022-05-31 20:21:38.510 -06:00 [INF] Executed ViewResult - view Form executed in 4.3899ms.
+2022-05-31 20:21:38.510 -06:00 [INF] Executed action ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject) in 13.492ms
+2022-05-31 20:21:38.510 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject)'
+2022-05-31 20:21:38.514 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/AsignacionGrupo/Form?idGrupo=6 - - - 200 - text/html;+charset=utf-8 20.8752ms
+2022-05-31 20:21:44.923 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/ - -
+2022-05-31 20:21:44.924 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 20:21:44.924 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.HomeController (ADSProject).
+2022-05-31 20:21:44.926 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 20:21:44.930 -06:00 [INF] Executed ViewResult - view Index executed in 4.4613ms.
+2022-05-31 20:21:44.935 -06:00 [INF] Executed action ADSProject.Controllers.HomeController.Index (ADSProject) in 10.837ms
+2022-05-31 20:21:44.936 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 20:21:44.962 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/ - - - 200 - text/html;+charset=utf-8 39.0274ms
+2022-05-31 20:21:46.279 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Grupo - -
+2022-05-31 20:21:46.279 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 20:21:46.279 -06:00 [INF] Route matched with {action = "Index", controller = "Grupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.GrupoController (ADSProject).
+2022-05-31 20:21:46.280 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 20:21:46.302 -06:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado], [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria], [p].[idProfesor], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado], [p].[nombreProfesor]
+FROM [Grupos] AS [g]
+INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+WHERE [g].[estado] = CAST(1 AS bit)
+2022-05-31 20:21:46.303 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 20:21:46.312 -06:00 [INF] Executed ViewResult - view Index executed in 9.0074ms.
+2022-05-31 20:21:46.312 -06:00 [INF] Executed action ADSProject.Controllers.GrupoController.Index (ADSProject) in 32.4629ms
+2022-05-31 20:21:46.312 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 20:21:46.314 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Grupo - - - 200 - text/html;+charset=utf-8 35.1448ms
+2022-05-31 20:21:47.604 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/AsignacionGrupo/Form?idGrupo=6 - -
+2022-05-31 20:21:47.605 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject)'
+2022-05-31 20:21:47.605 -06:00 [INF] Route matched with {action = "Form", controller = "AsignacionGrupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Form(Int32) on controller ADSProject.Controllers.AsignacionGrupoController (ADSProject).
+2022-05-31 20:21:47.610 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 20:21:47.616 -06:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[idEstudiante], [e].[apellidosEstudiante], [e].[codigoEstudiante], [e].[correoEstudiante], [e].[estado], [e].[idCarrera], [e].[nombresEstudiante]
+FROM [Estudiantes] AS [e]
+WHERE [e].[estado] = CAST(1 AS bit)
+2022-05-31 20:21:47.639 -06:00 [INF] Executed DbCommand (21ms) [Parameters=[@__idGrupo_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[idGrupo], [t].[anio], [t].[ciclo], [t].[estado], [t].[idCarrera], [t].[idMateria], [t].[idProfesor], [t].[idCarrera0], [t].[CodigoCarrera], [t].[NombreCarrera], [t].[estado0], [t].[idProfesor0], [t].[apellidoProfesor], [t].[correoEstudiante], [t].[estado1], [t].[nombreProfesor], [t].[idMateria0], [t].[estado2], [t].[idCarrera1], [t].[nombreMateria], [t0].[id], [t0].[idEstudiante], [t0].[idGrupo], [t0].[idEstudiante0], [t0].[apellidosEstudiante], [t0].[codigoEstudiante], [t0].[correoEstudiante], [t0].[estado], [t0].[idCarrera], [t0].[nombresEstudiante]
+FROM (
+    SELECT TOP(2) [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera] AS [idCarrera0], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado] AS [estado0], [p].[idProfesor] AS [idProfesor0], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado] AS [estado1], [p].[nombreProfesor], [m].[idMateria] AS [idMateria0], [m].[estado] AS [estado2], [m].[idCarrera] AS [idCarrera1], [m].[nombreMateria]
+    FROM [Grupos] AS [g]
+    INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+    INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+    INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+    WHERE ([g].[estado] = CAST(1 AS bit)) AND ([g].[idGrupo] = @__idGrupo_0)
+) AS [t]
+LEFT JOIN (
+    SELECT [a].[id], [a].[idEstudiante], [a].[idGrupo], [e].[idEstudiante] AS [idEstudiante0], [e].[apellidosEstudiante], [e].[codigoEstudiante], [e].[correoEstudiante], [e].[estado], [e].[idCarrera], [e].[nombresEstudiante]
+    FROM [AsignacionGrupos] AS [a]
+    INNER JOIN [Estudiantes] AS [e] ON [a].[idEstudiante] = [e].[idEstudiante]
+) AS [t0] ON [t].[idGrupo] = [t0].[idGrupo]
+ORDER BY [t].[idGrupo], [t].[idCarrera0], [t].[idProfesor0], [t].[idMateria0], [t0].[id], [t0].[idEstudiante0]
+2022-05-31 20:21:47.641 -06:00 [INF] Executing ViewResult, running view Form.
+2022-05-31 20:21:47.643 -06:00 [INF] Executed ViewResult - view Form executed in 2.2925ms.
+2022-05-31 20:21:47.643 -06:00 [INF] Executed action ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject) in 38.0733ms
+2022-05-31 20:21:47.643 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject)'
+2022-05-31 20:21:47.645 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/AsignacionGrupo/Form?idGrupo=6 - - - 200 - text/html;+charset=utf-8 40.4914ms
+2022-05-31 20:34:53.903 -06:00 [INF] User profile is available. Using 'C:\Users\Sony\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-05-31 20:34:54.957 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-31 20:34:54.958 -06:00 [INF] Hosting environment: Development
+2022-05-31 20:34:54.959 -06:00 [INF] Content root path: C:\Users\Sony\Desktop\CICLO1_2022\LAB_ADS\ADSProject2022-master\ADSProject
+2022-05-31 20:34:55.066 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/ - -
+2022-05-31 20:34:55.140 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 20:34:55.250 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.HomeController (ADSProject).
+2022-05-31 20:34:55.354 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 20:34:55.672 -06:00 [INF] Executed ViewResult - view Index executed in 393.3494ms.
+2022-05-31 20:34:55.680 -06:00 [INF] Executed action ADSProject.Controllers.HomeController.Index (ADSProject) in 428.6895ms
+2022-05-31 20:34:55.681 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 20:34:55.717 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/ - - - 200 - text/html;+charset=utf-8 658.1544ms
+2022-05-31 20:35:39.785 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Estudiante - -
+2022-05-31 20:35:39.825 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.EstudianteController.Index (ADSProject)'
+2022-05-31 20:35:39.858 -06:00 [INF] Route matched with {action = "Index", controller = "Estudiante"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.EstudianteController (ADSProject).
+2022-05-31 20:35:41.706 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 20:35:43.088 -06:00 [INF] Executed DbCommand (96ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[idEstudiante], [e].[apellidosEstudiante], [e].[codigoEstudiante], [e].[correoEstudiante], [e].[estado], [e].[idCarrera], [e].[nombresEstudiante], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado]
+FROM [Estudiantes] AS [e]
+INNER JOIN [Carreras] AS [c] ON [e].[idCarrera] = [c].[idCarrera]
+WHERE [e].[estado] = CAST(1 AS bit)
+2022-05-31 20:35:43.339 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 20:35:43.435 -06:00 [INF] Executed ViewResult - view Index executed in 123.1134ms.
+2022-05-31 20:35:43.436 -06:00 [INF] Executed action ADSProject.Controllers.EstudianteController.Index (ADSProject) in 3577.7998ms
+2022-05-31 20:35:43.436 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.EstudianteController.Index (ADSProject)'
+2022-05-31 20:35:43.447 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Estudiante - - - 200 - text/html;+charset=utf-8 3660.7896ms
+2022-05-31 20:35:48.275 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/ - -
+2022-05-31 20:35:48.275 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 20:35:48.276 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.HomeController (ADSProject).
+2022-05-31 20:35:48.276 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 20:35:48.281 -06:00 [INF] Executed ViewResult - view Index executed in 4.5731ms.
+2022-05-31 20:35:48.281 -06:00 [INF] Executed action ADSProject.Controllers.HomeController.Index (ADSProject) in 5.1464ms
+2022-05-31 20:35:48.282 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 20:35:48.284 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/ - - - 200 - text/html;+charset=utf-8 9.5601ms
+2022-05-31 20:35:49.584 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Grupo - -
+2022-05-31 20:35:49.593 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 20:35:49.597 -06:00 [INF] Route matched with {action = "Index", controller = "Grupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.GrupoController (ADSProject).
+2022-05-31 20:35:49.662 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 20:35:49.729 -06:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado], [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria], [p].[idProfesor], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado], [p].[nombreProfesor]
+FROM [Grupos] AS [g]
+INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+WHERE [g].[estado] = CAST(1 AS bit)
+2022-05-31 20:35:49.814 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 20:35:49.848 -06:00 [INF] Executed ViewResult - view Index executed in 38.4879ms.
+2022-05-31 20:35:49.848 -06:00 [INF] Executed action ADSProject.Controllers.GrupoController.Index (ADSProject) in 251.476ms
+2022-05-31 20:35:49.849 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 20:35:49.850 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Grupo - - - 200 - text/html;+charset=utf-8 266.6416ms
+2022-05-31 20:42:49.216 -06:00 [INF] User profile is available. Using 'C:\Users\Sony\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-05-31 20:42:50.447 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-31 20:42:50.448 -06:00 [INF] Hosting environment: Development
+2022-05-31 20:42:50.448 -06:00 [INF] Content root path: C:\Users\Sony\Desktop\CICLO1_2022\LAB_ADS\ADSProject2022-master\ADSProject
+2022-05-31 20:42:50.557 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/ - -
+2022-05-31 20:42:50.648 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 20:42:50.746 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.HomeController (ADSProject).
+2022-05-31 20:42:50.894 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 20:42:51.244 -06:00 [INF] Executed ViewResult - view Index executed in 461.415ms.
+2022-05-31 20:42:51.253 -06:00 [INF] Executed action ADSProject.Controllers.HomeController.Index (ADSProject) in 506.1776ms
+2022-05-31 20:42:51.255 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 20:42:51.282 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/ - - - 200 - text/html;+charset=utf-8 732.7482ms
+2022-05-31 20:42:56.781 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Grupo - -
+2022-05-31 20:42:56.788 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 20:42:56.801 -06:00 [INF] Route matched with {action = "Index", controller = "Grupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.GrupoController (ADSProject).
+2022-05-31 20:42:58.693 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 20:43:00.341 -06:00 [INF] Executed DbCommand (67ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado], [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria], [p].[idProfesor], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado], [p].[nombreProfesor]
+FROM [Grupos] AS [g]
+INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+WHERE [g].[estado] = CAST(1 AS bit)
+2022-05-31 20:43:00.695 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 20:43:00.802 -06:00 [INF] Executed ViewResult - view Index executed in 114.4869ms.
+2022-05-31 20:43:00.802 -06:00 [INF] Executed action ADSProject.Controllers.GrupoController.Index (ADSProject) in 4001.2397ms
+2022-05-31 20:43:00.803 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 20:43:00.818 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Grupo - - - 200 - text/html;+charset=utf-8 4036.6017ms
+2022-05-31 20:44:45.346 -06:00 [INF] User profile is available. Using 'C:\Users\Sony\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-05-31 20:44:46.414 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-31 20:44:46.415 -06:00 [INF] Hosting environment: Development
+2022-05-31 20:44:46.415 -06:00 [INF] Content root path: C:\Users\Sony\Desktop\CICLO1_2022\LAB_ADS\ADSProject2022-master\ADSProject
+2022-05-31 20:44:46.516 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/ - -
+2022-05-31 20:44:46.591 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 20:44:46.803 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.HomeController (ADSProject).
+2022-05-31 20:44:46.907 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 20:44:47.282 -06:00 [INF] Executed ViewResult - view Index executed in 442.0286ms.
+2022-05-31 20:44:47.289 -06:00 [INF] Executed action ADSProject.Controllers.HomeController.Index (ADSProject) in 485.2018ms
+2022-05-31 20:44:47.290 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 20:44:47.345 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/ - - - 200 - text/html;+charset=utf-8 833.7740ms
+2022-05-31 20:44:49.177 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Grupo - -
+2022-05-31 20:44:49.185 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 20:44:49.191 -06:00 [INF] Route matched with {action = "Index", controller = "Grupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.GrupoController (ADSProject).
+2022-05-31 20:44:51.155 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 20:44:52.826 -06:00 [INF] Executed DbCommand (72ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado], [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria], [p].[idProfesor], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado], [p].[nombreProfesor]
+FROM [Grupos] AS [g]
+INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+WHERE [g].[estado] = CAST(1 AS bit)
+2022-05-31 20:44:53.197 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 20:44:53.249 -06:00 [INF] Executed ViewResult - view Index executed in 59.5656ms.
+2022-05-31 20:44:53.249 -06:00 [INF] Executed action ADSProject.Controllers.GrupoController.Index (ADSProject) in 4058.2589ms
+2022-05-31 20:44:53.250 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 20:44:53.262 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Grupo - - - 200 - text/html;+charset=utf-8 4082.0912ms
+2022-05-31 20:46:07.047 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/AsignacionGrupo/Form?idGrupo=6 - -
+2022-05-31 20:46:07.098 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject)'
+2022-05-31 20:46:07.118 -06:00 [INF] Route matched with {action = "Form", controller = "AsignacionGrupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Form(Int32) on controller ADSProject.Controllers.AsignacionGrupoController (ADSProject).
+2022-05-31 20:46:07.232 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 20:46:07.250 -06:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[idEstudiante], [e].[apellidosEstudiante], [e].[codigoEstudiante], [e].[correoEstudiante], [e].[estado], [e].[idCarrera], [e].[nombresEstudiante]
+FROM [Estudiantes] AS [e]
+WHERE [e].[estado] = CAST(1 AS bit)
+2022-05-31 20:46:07.651 -06:00 [INF] Executed DbCommand (71ms) [Parameters=[@__idGrupo_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[idGrupo], [t].[anio], [t].[ciclo], [t].[estado], [t].[idCarrera], [t].[idMateria], [t].[idProfesor], [t].[idCarrera0], [t].[CodigoCarrera], [t].[NombreCarrera], [t].[estado0], [t].[idProfesor0], [t].[apellidoProfesor], [t].[correoEstudiante], [t].[estado1], [t].[nombreProfesor], [t].[idMateria0], [t].[estado2], [t].[idCarrera1], [t].[nombreMateria], [t0].[id], [t0].[idEstudiante], [t0].[idGrupo], [t0].[idEstudiante0], [t0].[apellidosEstudiante], [t0].[codigoEstudiante], [t0].[correoEstudiante], [t0].[estado], [t0].[idCarrera], [t0].[nombresEstudiante]
+FROM (
+    SELECT TOP(2) [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera] AS [idCarrera0], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado] AS [estado0], [p].[idProfesor] AS [idProfesor0], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado] AS [estado1], [p].[nombreProfesor], [m].[idMateria] AS [idMateria0], [m].[estado] AS [estado2], [m].[idCarrera] AS [idCarrera1], [m].[nombreMateria]
+    FROM [Grupos] AS [g]
+    INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+    INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+    INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+    WHERE ([g].[estado] = CAST(1 AS bit)) AND ([g].[idGrupo] = @__idGrupo_0)
+) AS [t]
+LEFT JOIN (
+    SELECT [a].[id], [a].[idEstudiante], [a].[idGrupo], [e].[idEstudiante] AS [idEstudiante0], [e].[apellidosEstudiante], [e].[codigoEstudiante], [e].[correoEstudiante], [e].[estado], [e].[idCarrera], [e].[nombresEstudiante]
+    FROM [AsignacionGrupos] AS [a]
+    INNER JOIN [Estudiantes] AS [e] ON [a].[idEstudiante] = [e].[idEstudiante]
+) AS [t0] ON [t].[idGrupo] = [t0].[idGrupo]
+ORDER BY [t].[idGrupo], [t].[idCarrera0], [t].[idProfesor0], [t].[idMateria0], [t0].[id], [t0].[idEstudiante0]
+2022-05-31 20:46:07.730 -06:00 [INF] Executing ViewResult, running view Form.
+2022-05-31 20:46:07.831 -06:00 [INF] Executed ViewResult - view Form executed in 137.5137ms.
+2022-05-31 20:46:07.831 -06:00 [INF] Executed action ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject) in 712.795ms
+2022-05-31 20:46:07.831 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject)'
+2022-05-31 20:46:07.833 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/AsignacionGrupo/Form?idGrupo=6 - - - 200 - text/html;+charset=utf-8 785.9228ms
+2022-05-31 20:46:38.249 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:45719/AsignacionGrupo/Form multipart/form-data;+boundary=----WebKitFormBoundaryrPenhGU5tvokThh2 637
+2022-05-31 20:46:38.250 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject)'
+2022-05-31 20:46:38.283 -06:00 [INF] Route matched with {action = "Form", controller = "AsignacionGrupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Form(ADSProject.Models.GrupoViewModel) on controller ADSProject.Controllers.AsignacionGrupoController (ADSProject).
+2022-05-31 20:46:38.369 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 20:46:38.635 -06:00 [INF] Executed DbCommand (37ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AsignacionGrupos] ([idEstudiante], [idGrupo])
+VALUES (@p0, @p1);
+SELECT [id]
+FROM [AsignacionGrupos]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity();
+2022-05-31 20:46:38.721 -06:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2022-05-31 20:46:38.721 -06:00 [INF] Executed action ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject) in 438.1389ms
+2022-05-31 20:46:38.722 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject)'
+2022-05-31 20:46:38.748 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:45719/AsignacionGrupo/Form multipart/form-data;+boundary=----WebKitFormBoundaryrPenhGU5tvokThh2 637 - 200 - - 516.1797ms
+2022-05-31 20:46:40.895 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Grupo - -
+2022-05-31 20:46:40.896 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 20:46:40.897 -06:00 [INF] Route matched with {action = "Index", controller = "Grupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.GrupoController (ADSProject).
+2022-05-31 20:46:40.902 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 20:46:40.918 -06:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado], [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria], [p].[idProfesor], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado], [p].[nombreProfesor]
+FROM [Grupos] AS [g]
+INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+WHERE [g].[estado] = CAST(1 AS bit)
+2022-05-31 20:46:40.919 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 20:46:40.948 -06:00 [INF] Executed ViewResult - view Index executed in 29.2077ms.
+2022-05-31 20:46:40.949 -06:00 [INF] Executed action ADSProject.Controllers.GrupoController.Index (ADSProject) in 50.8478ms
+2022-05-31 20:46:40.949 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 20:46:40.950 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Grupo - - - 200 - text/html;+charset=utf-8 54.6456ms
+2022-05-31 20:46:44.390 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/AsignacionGrupo/Form?idGrupo=6 - -
+2022-05-31 20:46:44.391 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject)'
+2022-05-31 20:46:44.394 -06:00 [INF] Route matched with {action = "Form", controller = "AsignacionGrupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Form(Int32) on controller ADSProject.Controllers.AsignacionGrupoController (ADSProject).
+2022-05-31 20:46:44.398 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 20:46:44.399 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[idEstudiante], [e].[apellidosEstudiante], [e].[codigoEstudiante], [e].[correoEstudiante], [e].[estado], [e].[idCarrera], [e].[nombresEstudiante]
+FROM [Estudiantes] AS [e]
+WHERE [e].[estado] = CAST(1 AS bit)
+2022-05-31 20:46:44.402 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__idGrupo_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[idGrupo], [t].[anio], [t].[ciclo], [t].[estado], [t].[idCarrera], [t].[idMateria], [t].[idProfesor], [t].[idCarrera0], [t].[CodigoCarrera], [t].[NombreCarrera], [t].[estado0], [t].[idProfesor0], [t].[apellidoProfesor], [t].[correoEstudiante], [t].[estado1], [t].[nombreProfesor], [t].[idMateria0], [t].[estado2], [t].[idCarrera1], [t].[nombreMateria], [t0].[id], [t0].[idEstudiante], [t0].[idGrupo], [t0].[idEstudiante0], [t0].[apellidosEstudiante], [t0].[codigoEstudiante], [t0].[correoEstudiante], [t0].[estado], [t0].[idCarrera], [t0].[nombresEstudiante]
+FROM (
+    SELECT TOP(2) [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera] AS [idCarrera0], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado] AS [estado0], [p].[idProfesor] AS [idProfesor0], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado] AS [estado1], [p].[nombreProfesor], [m].[idMateria] AS [idMateria0], [m].[estado] AS [estado2], [m].[idCarrera] AS [idCarrera1], [m].[nombreMateria]
+    FROM [Grupos] AS [g]
+    INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+    INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+    INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+    WHERE ([g].[estado] = CAST(1 AS bit)) AND ([g].[idGrupo] = @__idGrupo_0)
+) AS [t]
+LEFT JOIN (
+    SELECT [a].[id], [a].[idEstudiante], [a].[idGrupo], [e].[idEstudiante] AS [idEstudiante0], [e].[apellidosEstudiante], [e].[codigoEstudiante], [e].[correoEstudiante], [e].[estado], [e].[idCarrera], [e].[nombresEstudiante]
+    FROM [AsignacionGrupos] AS [a]
+    INNER JOIN [Estudiantes] AS [e] ON [a].[idEstudiante] = [e].[idEstudiante]
+) AS [t0] ON [t].[idGrupo] = [t0].[idGrupo]
+ORDER BY [t].[idGrupo], [t].[idCarrera0], [t].[idProfesor0], [t].[idMateria0], [t0].[id], [t0].[idEstudiante0]
+2022-05-31 20:46:44.404 -06:00 [INF] Executing ViewResult, running view Form.
+2022-05-31 20:46:44.415 -06:00 [INF] Executed ViewResult - view Form executed in 10.9476ms.
+2022-05-31 20:46:44.415 -06:00 [INF] Executed action ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject) in 21.0242ms
+2022-05-31 20:46:44.415 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject)'
+2022-05-31 20:46:44.417 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/AsignacionGrupo/Form?idGrupo=6 - - - 200 - text/html;+charset=utf-8 27.4576ms
+2022-05-31 20:47:07.353 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Grupo - -
+2022-05-31 20:47:07.354 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 20:47:07.356 -06:00 [INF] Route matched with {action = "Index", controller = "Grupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.GrupoController (ADSProject).
+2022-05-31 20:47:07.375 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 20:47:07.389 -06:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado], [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria], [p].[idProfesor], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado], [p].[nombreProfesor]
+FROM [Grupos] AS [g]
+INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+WHERE [g].[estado] = CAST(1 AS bit)
+2022-05-31 20:47:07.390 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 20:47:07.396 -06:00 [INF] Executed ViewResult - view Index executed in 6.0836ms.
+2022-05-31 20:47:07.396 -06:00 [INF] Executed action ADSProject.Controllers.GrupoController.Index (ADSProject) in 40.2508ms
+2022-05-31 20:47:07.398 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 20:47:07.419 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Grupo - - - 200 - text/html;+charset=utf-8 65.8544ms
+2022-05-31 20:49:38.097 -06:00 [INF] User profile is available. Using 'C:\Users\Sony\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-05-31 20:49:39.139 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-31 20:49:39.140 -06:00 [INF] Hosting environment: Development
+2022-05-31 20:49:39.140 -06:00 [INF] Content root path: C:\Users\Sony\Desktop\CICLO1_2022\LAB_ADS\ADSProject2022-master\ADSProject
+2022-05-31 20:49:39.232 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/ - -
+2022-05-31 20:49:39.297 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 20:49:39.409 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.HomeController (ADSProject).
+2022-05-31 20:49:39.540 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 20:49:39.869 -06:00 [INF] Executed ViewResult - view Index executed in 429.1384ms.
+2022-05-31 20:49:39.874 -06:00 [INF] Executed action ADSProject.Controllers.HomeController.Index (ADSProject) in 463.8818ms
+2022-05-31 20:49:39.875 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 20:49:39.907 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/ - - - 200 - text/html;+charset=utf-8 680.1580ms
+2022-05-31 20:49:41.668 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Grupo - -
+2022-05-31 20:49:41.676 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 20:49:41.681 -06:00 [INF] Route matched with {action = "Index", controller = "Grupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.GrupoController (ADSProject).
+2022-05-31 20:49:43.620 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 20:49:45.083 -06:00 [INF] Executed DbCommand (81ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado], [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria], [p].[idProfesor], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado], [p].[nombreProfesor]
+FROM [Grupos] AS [g]
+INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+WHERE [g].[estado] = CAST(1 AS bit)
+2022-05-31 20:49:45.502 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 20:49:45.601 -06:00 [INF] Executed ViewResult - view Index executed in 106.4996ms.
+2022-05-31 20:49:45.602 -06:00 [INF] Executed action ADSProject.Controllers.GrupoController.Index (ADSProject) in 3919.6171ms
+2022-05-31 20:49:45.602 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 20:49:45.615 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Grupo - - - 200 - text/html;+charset=utf-8 3947.0584ms
+2022-05-31 20:51:01.985 -06:00 [INF] User profile is available. Using 'C:\Users\Sony\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-05-31 20:51:03.174 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-31 20:51:03.175 -06:00 [INF] Hosting environment: Development
+2022-05-31 20:51:03.175 -06:00 [INF] Content root path: C:\Users\Sony\Desktop\CICLO1_2022\LAB_ADS\ADSProject2022-master\ADSProject
+2022-05-31 20:51:03.274 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/ - -
+2022-05-31 20:51:03.370 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 20:51:03.500 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.HomeController (ADSProject).
+2022-05-31 20:51:03.608 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 20:51:03.933 -06:00 [INF] Executed ViewResult - view Index executed in 400.5142ms.
+2022-05-31 20:51:03.943 -06:00 [INF] Executed action ADSProject.Controllers.HomeController.Index (ADSProject) in 441.0671ms
+2022-05-31 20:51:03.946 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 20:51:03.979 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/ - - - 200 - text/html;+charset=utf-8 709.1538ms
+2022-05-31 20:51:05.657 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Grupo - -
+2022-05-31 20:51:05.662 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 20:51:05.670 -06:00 [INF] Route matched with {action = "Index", controller = "Grupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.GrupoController (ADSProject).
+2022-05-31 20:51:07.375 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 20:51:08.756 -06:00 [INF] Executed DbCommand (75ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado], [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria], [p].[idProfesor], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado], [p].[nombreProfesor]
+FROM [Grupos] AS [g]
+INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+WHERE [g].[estado] = CAST(1 AS bit)
+2022-05-31 20:51:09.041 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 20:51:09.092 -06:00 [INF] Executed ViewResult - view Index executed in 56.5129ms.
+2022-05-31 20:51:09.092 -06:00 [INF] Executed action ADSProject.Controllers.GrupoController.Index (ADSProject) in 3422.1512ms
+2022-05-31 20:51:09.092 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 20:51:09.106 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Grupo - - - 200 - text/html;+charset=utf-8 3448.4149ms
+2022-05-31 20:57:11.860 -06:00 [INF] User profile is available. Using 'C:\Users\Sony\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-05-31 20:57:12.900 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-31 20:57:12.900 -06:00 [INF] Hosting environment: Development
+2022-05-31 20:57:12.900 -06:00 [INF] Content root path: C:\Users\Sony\Desktop\CICLO1_2022\LAB_ADS\ADSProject2022-master\ADSProject
+2022-05-31 20:57:12.971 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/ - -
+2022-05-31 20:57:13.054 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 20:57:13.167 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.HomeController (ADSProject).
+2022-05-31 20:57:13.275 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 20:57:13.574 -06:00 [INF] Executed ViewResult - view Index executed in 380.6507ms.
+2022-05-31 20:57:13.581 -06:00 [INF] Executed action ADSProject.Controllers.HomeController.Index (ADSProject) in 412.3016ms
+2022-05-31 20:57:13.582 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 20:57:13.608 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/ - - - 200 - text/html;+charset=utf-8 641.7584ms
+2022-05-31 20:57:35.592 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Grupo - -
+2022-05-31 20:57:35.634 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 20:57:35.638 -06:00 [INF] Route matched with {action = "Index", controller = "Grupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.GrupoController (ADSProject).
+2022-05-31 20:57:37.342 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 20:57:38.744 -06:00 [INF] Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado], [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria], [p].[idProfesor], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado], [p].[nombreProfesor]
+FROM [Grupos] AS [g]
+INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+WHERE [g].[estado] = CAST(1 AS bit)
+2022-05-31 20:57:39.005 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 20:57:39.105 -06:00 [INF] Executed ViewResult - view Index executed in 122.076ms.
+2022-05-31 20:57:39.106 -06:00 [INF] Executed action ADSProject.Controllers.GrupoController.Index (ADSProject) in 3466.6219ms
+2022-05-31 20:57:39.107 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 20:57:39.121 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Grupo - - - 200 - text/html;+charset=utf-8 3528.2537ms
+2022-05-31 21:05:21.251 -06:00 [INF] User profile is available. Using 'C:\Users\Sony\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-05-31 21:05:22.303 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-31 21:05:22.303 -06:00 [INF] Hosting environment: Development
+2022-05-31 21:05:22.303 -06:00 [INF] Content root path: C:\Users\Sony\Desktop\CICLO1_2022\LAB_ADS\ADSProject2022-master\ADSProject
+2022-05-31 21:05:22.380 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/ - -
+2022-05-31 21:05:22.467 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 21:05:22.578 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.HomeController (ADSProject).
+2022-05-31 21:05:22.737 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 21:05:23.024 -06:00 [INF] Executed ViewResult - view Index executed in 418.6298ms.
+2022-05-31 21:05:23.028 -06:00 [INF] Executed action ADSProject.Controllers.HomeController.Index (ADSProject) in 449.3561ms
+2022-05-31 21:05:23.030 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 21:05:23.056 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/ - - - 200 - text/html;+charset=utf-8 680.4862ms
+2022-05-31 21:06:58.551 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Grupo - -
+2022-05-31 21:06:58.574 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 21:06:58.580 -06:00 [INF] Route matched with {action = "Index", controller = "Grupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.GrupoController (ADSProject).
+2022-05-31 21:07:00.328 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 21:07:01.869 -06:00 [INF] Executed DbCommand (95ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado], [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria], [p].[idProfesor], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado], [p].[nombreProfesor]
+FROM [Grupos] AS [g]
+INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+WHERE [g].[estado] = CAST(1 AS bit)
+2022-05-31 21:07:02.147 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 21:07:02.227 -06:00 [INF] Executed ViewResult - view Index executed in 108.2739ms.
+2022-05-31 21:07:02.228 -06:00 [INF] Executed action ADSProject.Controllers.GrupoController.Index (ADSProject) in 3646.839ms
+2022-05-31 21:07:02.228 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 21:07:02.238 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Grupo - - - 200 - text/html;+charset=utf-8 3712.2273ms
+2022-05-31 21:07:04.308 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/AsignacionGrupo/Form?idGrupo=6 - -
+2022-05-31 21:07:04.313 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject)'
+2022-05-31 21:07:04.335 -06:00 [INF] Route matched with {action = "Form", controller = "AsignacionGrupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Form(Int32) on controller ADSProject.Controllers.AsignacionGrupoController (ADSProject).
+2022-05-31 21:07:04.462 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 21:07:04.503 -06:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[idEstudiante], [e].[apellidosEstudiante], [e].[codigoEstudiante], [e].[correoEstudiante], [e].[estado], [e].[idCarrera], [e].[nombresEstudiante]
+FROM [Estudiantes] AS [e]
+WHERE [e].[estado] = CAST(1 AS bit)
+2022-05-31 21:07:04.865 -06:00 [INF] Executed DbCommand (49ms) [Parameters=[@__idGrupo_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[idGrupo], [t].[anio], [t].[ciclo], [t].[estado], [t].[idCarrera], [t].[idMateria], [t].[idProfesor], [t].[idCarrera0], [t].[CodigoCarrera], [t].[NombreCarrera], [t].[estado0], [t].[idProfesor0], [t].[apellidoProfesor], [t].[correoEstudiante], [t].[estado1], [t].[nombreProfesor], [t].[idMateria0], [t].[estado2], [t].[idCarrera1], [t].[nombreMateria], [t0].[id], [t0].[idEstudiante], [t0].[idGrupo], [t0].[idEstudiante0], [t0].[apellidosEstudiante], [t0].[codigoEstudiante], [t0].[correoEstudiante], [t0].[estado], [t0].[idCarrera], [t0].[nombresEstudiante]
+FROM (
+    SELECT TOP(2) [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera] AS [idCarrera0], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado] AS [estado0], [p].[idProfesor] AS [idProfesor0], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado] AS [estado1], [p].[nombreProfesor], [m].[idMateria] AS [idMateria0], [m].[estado] AS [estado2], [m].[idCarrera] AS [idCarrera1], [m].[nombreMateria]
+    FROM [Grupos] AS [g]
+    INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+    INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+    INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+    WHERE ([g].[estado] = CAST(1 AS bit)) AND ([g].[idGrupo] = @__idGrupo_0)
+) AS [t]
+LEFT JOIN (
+    SELECT [a].[id], [a].[idEstudiante], [a].[idGrupo], [e].[idEstudiante] AS [idEstudiante0], [e].[apellidosEstudiante], [e].[codigoEstudiante], [e].[correoEstudiante], [e].[estado], [e].[idCarrera], [e].[nombresEstudiante]
+    FROM [AsignacionGrupos] AS [a]
+    INNER JOIN [Estudiantes] AS [e] ON [a].[idEstudiante] = [e].[idEstudiante]
+) AS [t0] ON [t].[idGrupo] = [t0].[idGrupo]
+ORDER BY [t].[idGrupo], [t].[idCarrera0], [t].[idProfesor0], [t].[idMateria0], [t0].[id], [t0].[idEstudiante0]
+2022-05-31 21:07:04.897 -06:00 [INF] Executing ViewResult, running view Form.
+2022-05-31 21:07:04.997 -06:00 [INF] Executed ViewResult - view Form executed in 113.8494ms.
+2022-05-31 21:07:04.998 -06:00 [INF] Executed action ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject) in 662.5412ms
+2022-05-31 21:07:04.998 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject)'
+2022-05-31 21:07:05.000 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/AsignacionGrupo/Form?idGrupo=6 - - - 200 - text/html;+charset=utf-8 691.4144ms
+2022-05-31 21:07:17.345 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Grupo - -
+2022-05-31 21:07:17.346 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 21:07:17.346 -06:00 [INF] Route matched with {action = "Index", controller = "Grupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.GrupoController (ADSProject).
+2022-05-31 21:07:17.375 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 21:07:17.382 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado], [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria], [p].[idProfesor], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado], [p].[nombreProfesor]
+FROM [Grupos] AS [g]
+INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+WHERE [g].[estado] = CAST(1 AS bit)
+2022-05-31 21:07:17.382 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 21:07:17.389 -06:00 [INF] Executed ViewResult - view Index executed in 7.019ms.
+2022-05-31 21:07:17.390 -06:00 [INF] Executed action ADSProject.Controllers.GrupoController.Index (ADSProject) in 42.8708ms
+2022-05-31 21:07:17.390 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 21:07:17.392 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Grupo - - - 200 - text/html;+charset=utf-8 46.4361ms
+2022-05-31 21:07:19.864 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/ - -
+2022-05-31 21:07:19.864 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 21:07:19.865 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.HomeController (ADSProject).
+2022-05-31 21:07:19.866 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 21:07:19.869 -06:00 [INF] Executed ViewResult - view Index executed in 3.7719ms.
+2022-05-31 21:07:19.870 -06:00 [INF] Executed action ADSProject.Controllers.HomeController.Index (ADSProject) in 4.5527ms
+2022-05-31 21:07:19.870 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 21:07:19.873 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/ - - - 200 - text/html;+charset=utf-8 9.7724ms
+2022-05-31 21:07:21.924 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Carrera - -
+2022-05-31 21:07:21.925 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.CarreraController.Index (ADSProject)'
+2022-05-31 21:07:21.930 -06:00 [INF] Route matched with {action = "Index", controller = "Carrera"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.CarreraController (ADSProject).
+2022-05-31 21:07:21.933 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 21:07:21.975 -06:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado]
+FROM [Carreras] AS [c]
+WHERE [c].[estado] = CAST(1 AS bit)
+2022-05-31 21:07:22.021 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 21:07:22.043 -06:00 [INF] Executed ViewResult - view Index executed in 66.857ms.
+2022-05-31 21:07:22.044 -06:00 [INF] Executed action ADSProject.Controllers.CarreraController.Index (ADSProject) in 113.5525ms
+2022-05-31 21:07:22.044 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.CarreraController.Index (ADSProject)'
+2022-05-31 21:07:22.046 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Carrera - - - 200 - text/html;+charset=utf-8 121.2212ms
+2022-05-31 21:07:32.314 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/ - -
+2022-05-31 21:07:32.314 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 21:07:32.315 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.HomeController (ADSProject).
+2022-05-31 21:07:32.315 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 21:07:32.319 -06:00 [INF] Executed ViewResult - view Index executed in 3.4885ms.
+2022-05-31 21:07:32.319 -06:00 [INF] Executed action ADSProject.Controllers.HomeController.Index (ADSProject) in 3.9029ms
+2022-05-31 21:07:32.319 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 21:07:32.321 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/ - - - 200 - text/html;+charset=utf-8 7.1313ms
+2022-05-31 21:07:33.872 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Materia - -
+2022-05-31 21:07:33.873 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.MateriaController.Index (ADSProject)'
+2022-05-31 21:07:33.878 -06:00 [INF] Route matched with {action = "Index", controller = "Materia"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.MateriaController (ADSProject).
+2022-05-31 21:07:33.881 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 21:07:33.903 -06:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado]
+FROM [Materias] AS [m]
+INNER JOIN [Carreras] AS [c] ON [m].[idCarrera] = [c].[idCarrera]
+WHERE [m].[estado] = CAST(1 AS bit)
+2022-05-31 21:07:33.912 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 21:07:33.954 -06:00 [INF] Executed ViewResult - view Index executed in 49.8993ms.
+2022-05-31 21:07:33.954 -06:00 [INF] Executed action ADSProject.Controllers.MateriaController.Index (ADSProject) in 76.2353ms
+2022-05-31 21:07:33.954 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.MateriaController.Index (ADSProject)'
+2022-05-31 21:07:33.955 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Materia - - - 200 - text/html;+charset=utf-8 83.0145ms
+2022-05-31 21:07:49.853 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Materia/Form?operaciones=agregar - -
+2022-05-31 21:07:49.855 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.MateriaController.Form (ADSProject)'
+2022-05-31 21:07:49.867 -06:00 [INF] Route matched with {action = "Form", controller = "Materia"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Form(System.Nullable`1[System.Int32], ADSProject.Utils.Operaciones) on controller ADSProject.Controllers.MateriaController (ADSProject).
+2022-05-31 21:07:49.870 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 21:07:49.871 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado]
+FROM [Carreras] AS [c]
+WHERE [c].[estado] = CAST(1 AS bit)
+2022-05-31 21:07:49.900 -06:00 [INF] Executing ViewResult, running view Form.
+2022-05-31 21:07:50.023 -06:00 [INF] Executed ViewResult - view Form executed in 148.4104ms.
+2022-05-31 21:07:50.023 -06:00 [INF] Executed action ADSProject.Controllers.MateriaController.Form (ADSProject) in 156.3446ms
+2022-05-31 21:07:50.023 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.MateriaController.Form (ADSProject)'
+2022-05-31 21:07:50.025 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Materia/Form?operaciones=agregar - - - 200 - text/html;+charset=utf-8 171.9050ms
+2022-05-31 21:07:53.596 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Materia - -
+2022-05-31 21:07:53.596 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.MateriaController.Index (ADSProject)'
+2022-05-31 21:07:53.597 -06:00 [INF] Route matched with {action = "Index", controller = "Materia"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.MateriaController (ADSProject).
+2022-05-31 21:07:53.597 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 21:07:53.601 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado]
+FROM [Materias] AS [m]
+INNER JOIN [Carreras] AS [c] ON [m].[idCarrera] = [c].[idCarrera]
+WHERE [m].[estado] = CAST(1 AS bit)
+2022-05-31 21:07:53.602 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 21:07:53.617 -06:00 [INF] Executed ViewResult - view Index executed in 14.9192ms.
+2022-05-31 21:07:53.617 -06:00 [INF] Executed action ADSProject.Controllers.MateriaController.Index (ADSProject) in 20.6558ms
+2022-05-31 21:07:53.617 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.MateriaController.Index (ADSProject)'
+2022-05-31 21:07:53.620 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Materia - - - 200 - text/html;+charset=utf-8 24.4433ms
+2022-05-31 21:07:56.712 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/ - -
+2022-05-31 21:07:56.712 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 21:07:56.713 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.HomeController (ADSProject).
+2022-05-31 21:07:56.713 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 21:07:56.715 -06:00 [INF] Executed ViewResult - view Index executed in 1.5126ms.
+2022-05-31 21:07:56.715 -06:00 [INF] Executed action ADSProject.Controllers.HomeController.Index (ADSProject) in 1.83ms
+2022-05-31 21:07:56.715 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.HomeController.Index (ADSProject)'
+2022-05-31 21:07:56.716 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/ - - - 200 - text/html;+charset=utf-8 4.3926ms
+2022-05-31 21:07:58.046 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Grupo - -
+2022-05-31 21:07:58.047 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 21:07:58.048 -06:00 [INF] Route matched with {action = "Index", controller = "Grupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.GrupoController (ADSProject).
+2022-05-31 21:07:58.050 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 21:07:58.078 -06:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado], [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria], [p].[idProfesor], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado], [p].[nombreProfesor]
+FROM [Grupos] AS [g]
+INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+WHERE [g].[estado] = CAST(1 AS bit)
+2022-05-31 21:07:58.079 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 21:07:58.090 -06:00 [INF] Executed ViewResult - view Index executed in 10.2595ms.
+2022-05-31 21:07:58.090 -06:00 [INF] Executed action ADSProject.Controllers.GrupoController.Index (ADSProject) in 42.0042ms
+2022-05-31 21:07:58.090 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 21:07:58.093 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Grupo - - - 200 - text/html;+charset=utf-8 46.1436ms
+2022-05-31 21:08:11.482 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Grupo/Form?operaciones=agregar - -
+2022-05-31 21:08:11.482 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.GrupoController.Form (ADSProject)'
+2022-05-31 21:08:11.485 -06:00 [INF] Route matched with {action = "Form", controller = "Grupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Form(System.Nullable`1[System.Int32], ADSProject.Utils.Operaciones) on controller ADSProject.Controllers.GrupoController (ADSProject).
+2022-05-31 21:08:11.490 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 21:08:11.496 -06:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado]
+FROM [Carreras] AS [c]
+WHERE [c].[estado] = CAST(1 AS bit)
+2022-05-31 21:08:11.531 -06:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria]
+FROM [Materias] AS [m]
+WHERE [m].[estado] = CAST(1 AS bit)
+2022-05-31 21:08:11.547 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[idProfesor], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado], [p].[nombreProfesor]
+FROM [Profesores] AS [p]
+WHERE [p].[estado] = CAST(1 AS bit)
+2022-05-31 21:08:11.577 -06:00 [INF] Executing ViewResult, running view Form.
+2022-05-31 21:08:11.702 -06:00 [INF] Executed ViewResult - view Form executed in 149.6556ms.
+2022-05-31 21:08:11.702 -06:00 [INF] Executed action ADSProject.Controllers.GrupoController.Form (ADSProject) in 216.4063ms
+2022-05-31 21:08:11.702 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.GrupoController.Form (ADSProject)'
+2022-05-31 21:08:11.704 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Grupo/Form?operaciones=agregar - - - 200 - text/html;+charset=utf-8 221.8267ms
+2022-05-31 21:08:11.843 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Grupo/cargarMaterias?idCarrera=null&_=1654052891768 - -
+2022-05-31 21:08:11.847 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.GrupoController.cargarMaterias (ADSProject)'
+2022-05-31 21:08:11.849 -06:00 [INF] Route matched with {action = "cargarMaterias", controller = "Grupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult cargarMaterias(System.Nullable`1[System.Int32]) on controller ADSProject.Controllers.GrupoController (ADSProject).
+2022-05-31 21:08:11.968 -06:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ADSProject.Models.MateriaViewModel, ADSProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-05-31 21:08:12.062 -06:00 [INF] Executed action ADSProject.Controllers.GrupoController.cargarMaterias (ADSProject) in 212.4225ms
+2022-05-31 21:08:12.062 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.GrupoController.cargarMaterias (ADSProject)'
+2022-05-31 21:08:12.063 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Grupo/cargarMaterias?idCarrera=null&_=1654052891768 - - - 200 - application/json;+charset=utf-8 219.5304ms
+2022-05-31 21:08:14.540 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Grupo/cargarMaterias?idCarrera=4&_=1654052891769 - -
+2022-05-31 21:08:14.540 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.GrupoController.cargarMaterias (ADSProject)'
+2022-05-31 21:08:14.540 -06:00 [INF] Route matched with {action = "cargarMaterias", controller = "Grupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult cargarMaterias(System.Nullable`1[System.Int32]) on controller ADSProject.Controllers.GrupoController (ADSProject).
+2022-05-31 21:08:14.545 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 21:08:14.547 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria]
+FROM [Materias] AS [m]
+WHERE [m].[estado] = CAST(1 AS bit)
+2022-05-31 21:08:14.549 -06:00 [INF] Executing ObjectResult, writing value of type 'System.Linq.Enumerable+WhereListIterator`1[[ADSProject.Models.MateriaViewModel, ADSProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-05-31 21:08:14.639 -06:00 [INF] Executed action ADSProject.Controllers.GrupoController.cargarMaterias (ADSProject) in 99.0392ms
+2022-05-31 21:08:14.640 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.GrupoController.cargarMaterias (ADSProject)'
+2022-05-31 21:08:14.642 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Grupo/cargarMaterias?idCarrera=4&_=1654052891769 - - - 200 - application/json;+charset=utf-8 102.1054ms
+2022-05-31 21:08:30.714 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:45719/Grupo/Form multipart/form-data;+boundary=----WebKitFormBoundaryRAZPrWKofHpf75mo 1083
+2022-05-31 21:08:30.715 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.GrupoController.Form (ADSProject)'
+2022-05-31 21:08:30.731 -06:00 [INF] Route matched with {action = "Form", controller = "Grupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Form(ADSProject.Models.GrupoViewModel) on controller ADSProject.Controllers.GrupoController (ADSProject).
+2022-05-31 21:08:30.814 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 21:08:31.159 -06:00 [INF] Executed DbCommand (79ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Grupos] ([anio], [ciclo], [estado], [idCarrera], [idMateria], [idProfesor])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [idGrupo]
+FROM [Grupos]
+WHERE @@ROWCOUNT = 1 AND [idGrupo] = scope_identity();
+2022-05-31 21:08:31.247 -06:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2022-05-31 21:08:31.248 -06:00 [INF] Executed action ADSProject.Controllers.GrupoController.Form (ADSProject) in 517.1163ms
+2022-05-31 21:08:31.248 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.GrupoController.Form (ADSProject)'
+2022-05-31 21:08:31.251 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:45719/Grupo/Form multipart/form-data;+boundary=----WebKitFormBoundaryRAZPrWKofHpf75mo 1083 - 200 - - 536.6167ms
+2022-05-31 21:08:33.395 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Grupo - -
+2022-05-31 21:08:33.396 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 21:08:33.396 -06:00 [INF] Route matched with {action = "Index", controller = "Grupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.GrupoController (ADSProject).
+2022-05-31 21:08:33.398 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 21:08:33.428 -06:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado], [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria], [p].[idProfesor], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado], [p].[nombreProfesor]
+FROM [Grupos] AS [g]
+INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+WHERE [g].[estado] = CAST(1 AS bit)
+2022-05-31 21:08:33.429 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 21:08:33.445 -06:00 [INF] Executed ViewResult - view Index executed in 15.8996ms.
+2022-05-31 21:08:33.445 -06:00 [INF] Executed action ADSProject.Controllers.GrupoController.Index (ADSProject) in 48.6383ms
+2022-05-31 21:08:33.446 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 21:08:33.454 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Grupo - - - 200 - text/html;+charset=utf-8 57.2509ms
+2022-05-31 21:08:57.005 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/AsignacionGrupo/Form?idGrupo=7 - -
+2022-05-31 21:08:57.033 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject)'
+2022-05-31 21:08:57.033 -06:00 [INF] Route matched with {action = "Form", controller = "AsignacionGrupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Form(Int32) on controller ADSProject.Controllers.AsignacionGrupoController (ADSProject).
+2022-05-31 21:08:57.036 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 21:08:57.043 -06:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[idEstudiante], [e].[apellidosEstudiante], [e].[codigoEstudiante], [e].[correoEstudiante], [e].[estado], [e].[idCarrera], [e].[nombresEstudiante]
+FROM [Estudiantes] AS [e]
+WHERE [e].[estado] = CAST(1 AS bit)
+2022-05-31 21:08:57.116 -06:00 [INF] Executed DbCommand (33ms) [Parameters=[@__idGrupo_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[idGrupo], [t].[anio], [t].[ciclo], [t].[estado], [t].[idCarrera], [t].[idMateria], [t].[idProfesor], [t].[idCarrera0], [t].[CodigoCarrera], [t].[NombreCarrera], [t].[estado0], [t].[idProfesor0], [t].[apellidoProfesor], [t].[correoEstudiante], [t].[estado1], [t].[nombreProfesor], [t].[idMateria0], [t].[estado2], [t].[idCarrera1], [t].[nombreMateria], [t0].[id], [t0].[idEstudiante], [t0].[idGrupo], [t0].[idEstudiante0], [t0].[apellidosEstudiante], [t0].[codigoEstudiante], [t0].[correoEstudiante], [t0].[estado], [t0].[idCarrera], [t0].[nombresEstudiante]
+FROM (
+    SELECT TOP(2) [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera] AS [idCarrera0], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado] AS [estado0], [p].[idProfesor] AS [idProfesor0], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado] AS [estado1], [p].[nombreProfesor], [m].[idMateria] AS [idMateria0], [m].[estado] AS [estado2], [m].[idCarrera] AS [idCarrera1], [m].[nombreMateria]
+    FROM [Grupos] AS [g]
+    INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+    INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+    INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+    WHERE ([g].[estado] = CAST(1 AS bit)) AND ([g].[idGrupo] = @__idGrupo_0)
+) AS [t]
+LEFT JOIN (
+    SELECT [a].[id], [a].[idEstudiante], [a].[idGrupo], [e].[idEstudiante] AS [idEstudiante0], [e].[apellidosEstudiante], [e].[codigoEstudiante], [e].[correoEstudiante], [e].[estado], [e].[idCarrera], [e].[nombresEstudiante]
+    FROM [AsignacionGrupos] AS [a]
+    INNER JOIN [Estudiantes] AS [e] ON [a].[idEstudiante] = [e].[idEstudiante]
+) AS [t0] ON [t].[idGrupo] = [t0].[idGrupo]
+ORDER BY [t].[idGrupo], [t].[idCarrera0], [t].[idProfesor0], [t].[idMateria0], [t0].[id], [t0].[idEstudiante0]
+2022-05-31 21:08:57.118 -06:00 [INF] Executing ViewResult, running view Form.
+2022-05-31 21:08:57.124 -06:00 [INF] Executed ViewResult - view Form executed in 5.7667ms.
+2022-05-31 21:08:57.124 -06:00 [INF] Executed action ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject) in 90.5187ms
+2022-05-31 21:08:57.124 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject)'
+2022-05-31 21:08:57.171 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/AsignacionGrupo/Form?idGrupo=7 - - - 200 - text/html;+charset=utf-8 166.7788ms
+2022-05-31 21:09:04.353 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:45719/AsignacionGrupo/Form multipart/form-data;+boundary=----WebKitFormBoundaryWiG1DAvDk4W3l9TO 637
+2022-05-31 21:09:04.353 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject)'
+2022-05-31 21:09:04.359 -06:00 [INF] Route matched with {action = "Form", controller = "AsignacionGrupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Form(ADSProject.Models.GrupoViewModel) on controller ADSProject.Controllers.AsignacionGrupoController (ADSProject).
+2022-05-31 21:09:04.382 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 21:09:04.417 -06:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AsignacionGrupos] ([idEstudiante], [idGrupo])
+VALUES (@p0, @p1);
+SELECT [id]
+FROM [AsignacionGrupos]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity();
+2022-05-31 21:09:04.430 -06:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2022-05-31 21:09:04.430 -06:00 [INF] Executed action ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject) in 71.3554ms
+2022-05-31 21:09:04.430 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject)'
+2022-05-31 21:09:04.432 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:45719/AsignacionGrupo/Form multipart/form-data;+boundary=----WebKitFormBoundaryWiG1DAvDk4W3l9TO 637 - 200 - - 79.7422ms
+2022-05-31 21:09:06.247 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Grupo - -
+2022-05-31 21:09:06.247 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 21:09:06.247 -06:00 [INF] Route matched with {action = "Index", controller = "Grupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.GrupoController (ADSProject).
+2022-05-31 21:09:06.249 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 21:09:06.273 -06:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado], [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria], [p].[idProfesor], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado], [p].[nombreProfesor]
+FROM [Grupos] AS [g]
+INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+WHERE [g].[estado] = CAST(1 AS bit)
+2022-05-31 21:09:06.275 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 21:09:06.284 -06:00 [INF] Executed ViewResult - view Index executed in 9.104ms.
+2022-05-31 21:09:06.284 -06:00 [INF] Executed action ADSProject.Controllers.GrupoController.Index (ADSProject) in 36.38ms
+2022-05-31 21:09:06.284 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 21:09:06.290 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Grupo - - - 200 - text/html;+charset=utf-8 43.4640ms
+2022-05-31 21:09:09.362 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/AsignacionGrupo/Form?idGrupo=6 - -
+2022-05-31 21:09:09.363 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject)'
+2022-05-31 21:09:09.363 -06:00 [INF] Route matched with {action = "Form", controller = "AsignacionGrupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Form(Int32) on controller ADSProject.Controllers.AsignacionGrupoController (ADSProject).
+2022-05-31 21:09:09.364 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 21:09:09.375 -06:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[idEstudiante], [e].[apellidosEstudiante], [e].[codigoEstudiante], [e].[correoEstudiante], [e].[estado], [e].[idCarrera], [e].[nombresEstudiante]
+FROM [Estudiantes] AS [e]
+WHERE [e].[estado] = CAST(1 AS bit)
+2022-05-31 21:09:09.396 -06:00 [INF] Executed DbCommand (20ms) [Parameters=[@__idGrupo_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[idGrupo], [t].[anio], [t].[ciclo], [t].[estado], [t].[idCarrera], [t].[idMateria], [t].[idProfesor], [t].[idCarrera0], [t].[CodigoCarrera], [t].[NombreCarrera], [t].[estado0], [t].[idProfesor0], [t].[apellidoProfesor], [t].[correoEstudiante], [t].[estado1], [t].[nombreProfesor], [t].[idMateria0], [t].[estado2], [t].[idCarrera1], [t].[nombreMateria], [t0].[id], [t0].[idEstudiante], [t0].[idGrupo], [t0].[idEstudiante0], [t0].[apellidosEstudiante], [t0].[codigoEstudiante], [t0].[correoEstudiante], [t0].[estado], [t0].[idCarrera], [t0].[nombresEstudiante]
+FROM (
+    SELECT TOP(2) [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera] AS [idCarrera0], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado] AS [estado0], [p].[idProfesor] AS [idProfesor0], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado] AS [estado1], [p].[nombreProfesor], [m].[idMateria] AS [idMateria0], [m].[estado] AS [estado2], [m].[idCarrera] AS [idCarrera1], [m].[nombreMateria]
+    FROM [Grupos] AS [g]
+    INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+    INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+    INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+    WHERE ([g].[estado] = CAST(1 AS bit)) AND ([g].[idGrupo] = @__idGrupo_0)
+) AS [t]
+LEFT JOIN (
+    SELECT [a].[id], [a].[idEstudiante], [a].[idGrupo], [e].[idEstudiante] AS [idEstudiante0], [e].[apellidosEstudiante], [e].[codigoEstudiante], [e].[correoEstudiante], [e].[estado], [e].[idCarrera], [e].[nombresEstudiante]
+    FROM [AsignacionGrupos] AS [a]
+    INNER JOIN [Estudiantes] AS [e] ON [a].[idEstudiante] = [e].[idEstudiante]
+) AS [t0] ON [t].[idGrupo] = [t0].[idGrupo]
+ORDER BY [t].[idGrupo], [t].[idCarrera0], [t].[idProfesor0], [t].[idMateria0], [t0].[id], [t0].[idEstudiante0]
+2022-05-31 21:09:09.397 -06:00 [INF] Executing ViewResult, running view Form.
+2022-05-31 21:09:09.402 -06:00 [INF] Executed ViewResult - view Form executed in 4.5982ms.
+2022-05-31 21:09:09.402 -06:00 [INF] Executed action ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject) in 39.0285ms
+2022-05-31 21:09:09.402 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject)'
+2022-05-31 21:09:09.405 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/AsignacionGrupo/Form?idGrupo=6 - - - 200 - text/html;+charset=utf-8 42.5730ms
+2022-05-31 21:09:14.024 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:45719/AsignacionGrupo/Form multipart/form-data;+boundary=----WebKitFormBoundarySnfATubjiQZYiRQh 637
+2022-05-31 21:09:14.024 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject)'
+2022-05-31 21:09:14.026 -06:00 [INF] Route matched with {action = "Form", controller = "AsignacionGrupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Form(ADSProject.Models.GrupoViewModel) on controller ADSProject.Controllers.AsignacionGrupoController (ADSProject).
+2022-05-31 21:09:14.032 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 21:09:14.042 -06:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AsignacionGrupos] ([idEstudiante], [idGrupo])
+VALUES (@p0, @p1);
+SELECT [id]
+FROM [AsignacionGrupos]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity();
+2022-05-31 21:09:14.051 -06:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2022-05-31 21:09:14.051 -06:00 [INF] Executed action ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject) in 24.9619ms
+2022-05-31 21:09:14.052 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.AsignacionGrupoController.Form (ADSProject)'
+2022-05-31 21:09:14.053 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:45719/AsignacionGrupo/Form multipart/form-data;+boundary=----WebKitFormBoundarySnfATubjiQZYiRQh 637 - 200 - - 29.2815ms
+2022-05-31 21:09:15.737 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:45719/Grupo - -
+2022-05-31 21:09:15.738 -06:00 [INF] Executing endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 21:09:15.738 -06:00 [INF] Route matched with {action = "Index", controller = "Grupo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ADSProject.Controllers.GrupoController (ADSProject).
+2022-05-31 21:09:15.739 -06:00 [INF] Entity Framework Core 5.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-31 21:09:15.742 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[idGrupo], [g].[anio], [g].[ciclo], [g].[estado], [g].[idCarrera], [g].[idMateria], [g].[idProfesor], [c].[idCarrera], [c].[CodigoCarrera], [c].[NombreCarrera], [c].[estado], [m].[idMateria], [m].[estado], [m].[idCarrera], [m].[nombreMateria], [p].[idProfesor], [p].[apellidoProfesor], [p].[correoEstudiante], [p].[estado], [p].[nombreProfesor]
+FROM [Grupos] AS [g]
+INNER JOIN [Carreras] AS [c] ON [g].[idCarrera] = [c].[idCarrera]
+INNER JOIN [Materias] AS [m] ON [g].[idMateria] = [m].[idMateria]
+INNER JOIN [Profesores] AS [p] ON [g].[idProfesor] = [p].[idProfesor]
+WHERE [g].[estado] = CAST(1 AS bit)
+2022-05-31 21:09:15.744 -06:00 [INF] Executing ViewResult, running view Index.
+2022-05-31 21:09:15.757 -06:00 [INF] Executed ViewResult - view Index executed in 12.6694ms.
+2022-05-31 21:09:15.757 -06:00 [INF] Executed action ADSProject.Controllers.GrupoController.Index (ADSProject) in 18.5287ms
+2022-05-31 21:09:15.757 -06:00 [INF] Executed endpoint 'ADSProject.Controllers.GrupoController.Index (ADSProject)'
+2022-05-31 21:09:15.758 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:45719/Grupo - - - 200 - text/html;+charset=utf-8 20.9228ms
